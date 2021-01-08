@@ -1,14 +1,11 @@
-
-import { useSelector } from 'react-redux';
-import HomeScreenConfig from '../components/screens/HomeScreen/HomeScreenConfig';
+import HighChartConfig from '../components/screens/HighChart/highChartConfig';
 import LoginConfig from '../components/screens/Login/LoginConfig';
-import { generateRoutesFromConfigs } from './RoutesUtils';
-const config = [
-    HomeScreenConfig,
+import PieChartConfig from '../components/screens/PieChart/PieChartConfig';
+const routesConfig = [
+    HighChartConfig,
+    PieChartConfig,
     LoginConfig
 ];
 
-const routesConfig = [
-    ...generateRoutesFromConfigs(config),
-]
+
 export default routesConfig;

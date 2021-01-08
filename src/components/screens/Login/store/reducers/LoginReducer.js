@@ -1,7 +1,7 @@
 import * as Actions from '../actions';
 
 const initialState = {
-    role: "",
+    role: "guest",
     user: {},
     isAuthenticated: {
         status: false,
@@ -26,6 +26,16 @@ function LoginReducer(state = initialState, action) {
                 isAuthenticated: {
                     status: false,
                     error: action.payload
+                }
+            }
+        case Actions.LOGOUT:
+            console.log('rec')
+            return {
+                ...state,
+                user: {},
+                role: "guest",
+                isAuthenticated: {
+                    status: false
                 }
             }
         default: return state;

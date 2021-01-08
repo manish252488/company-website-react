@@ -1,5 +1,3 @@
-import authRoles from "../config/authRoles";
-
 export const generateRoutesFromConfigs = (configs, auth = "guest") => {
     let routes = [];
     configs.forEach(config => {

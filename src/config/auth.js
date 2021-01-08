@@ -16,7 +16,7 @@ export const auth = {
     },
     signInWithEmail(data) {
         return new Promise((resolve, reject) => {
-            axios.post('/user/login', data)
+            /* axios.post('/user/login', data)
                 .then(res => {
                     this.setSession(res.token)
                     resolve(res.data)
@@ -24,7 +24,13 @@ export const auth = {
                 .catch(err => {
                     this.setSession(null);
                     reject(err);
-                })
+                }) */
+            if (data.userName === "john" && data.password === "12345")
+                resolve({ user: data, role: 'user' })
+            else if (data.userName === "micky" && data.password === "98765")
+                resolve({ user: data, role: 'user2' })
+            else
+                reject({ message: 'unauthorized' })
         })
     },
     signInWithToken() {
