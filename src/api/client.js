@@ -1,10 +1,9 @@
 import axios from "axios";
 import store from "../store";
-const env = process.env.NODE_ENV;
+const env = process.env.REACT_APP_NODE_ENV;
 const devUrl = "http://localhost:8000";
 const testUrl = "http://domain.com";
 const prodUrl = "https://domain.com";
-console.log(process.env.NODE_ENV);
 const url =
   env === "development"
     ? devUrl
