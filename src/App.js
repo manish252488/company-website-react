@@ -1,10 +1,10 @@
-import AppContext from './AppContext';
-import { Provider } from 'react-redux';
-import { Router } from 'react-router-dom';
-import store from './store';
-import history from './@history'
-import AppRoute from './navigation/AppRoute';
-import routesConfig from './navigation/RoutesConfig';
+import AppContext from "./AppContext";
+import { Provider } from "react-redux";
+import { Router } from "react-router-dom";
+import store from "./store";
+import history from "./@history";
+import AppRoute from "./navigation/AppRoute";
+import routesConfig from "./navigation/RoutesConfig";
 function App() {
   return (
     <AppContext.Provider value={routesConfig}>

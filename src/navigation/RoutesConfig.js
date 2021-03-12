@@ -1,11 +1,5 @@
-import HighChartConfig from '../components/screens/HighChart/highChartConfig';
-import LoginConfig from '../components/screens/Login/LoginConfig';
-import PieChartConfig from '../components/screens/PieChart/PieChartConfig';
-const routesConfig = [
-    HighChartConfig,
-    PieChartConfig,
-    LoginConfig
-];
+import HomeRoutes from "../components/home/Home.routes";
 
+const routesConfig = [HomeRoutes];
 
 export default routesConfig;
