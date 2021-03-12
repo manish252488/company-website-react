@@ -4,10 +4,10 @@ const initialState = {
   user: {
     name: "john doe",
     email: "some@domain.com",
-    token: "wertyui4567890jdhasdfu8cn489c439c83c",
   },
+  token: "wertyui4567890jdhasdfu8cn489c439c83c",
   isAuthenticated: false,
-  role: "guest",
+  role: "",
 };
 function AuthReducer(state = initialState, action) {
   switch (action.type) {
