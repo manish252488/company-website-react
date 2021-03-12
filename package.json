@@ -23,13 +23,17 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "NODE_ENV=DEV react-app-rewired start",
-    "build": "NODE_ENV=DEV react-app-rewired build",
-    "test": "NODE_ENV=DEV react-app-rewired test",
+    "start": "NODE_ENV=development react-app-rewired start",
+    "build": "NODE_ENV=development react-app-rewired build",
+    "test": "NODE_ENV=development react-app-rewired test",
+    "start-test": "NODE_ENV=test react-app-rewired start",
+    "build-test": "NODE_ENV=test react-app-rewired build",
+    "test-test": "NODE_ENV=test react-app-rewired test",
+    "start-prod": "NODE_ENV=production react-app-rewired start",
+    "build-prod": "NODE_ENV=production react-app-rewired build",
+    "test-prod": "NODE_ENV=test react-app-rewired test",
     "clean": "rm -rf node_modules/",
-    "eject": "react-scripts eject",
-    "start-prod": "NODE_ENV=PROD react-app-rewired start",
-    "build-prod": "NODE_ENV=PROD react-app-rewired build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

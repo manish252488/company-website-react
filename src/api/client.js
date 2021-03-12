@@ -1,10 +1,18 @@
 import axios from "axios";
 import store from "../store";
 const env = process.env.NODE_ENV;
+const devUrl = "http://localhost:8000";
 const testUrl = "http://domain.com";
 const prodUrl = "https://domain.com";
-
-const url = env === "DEV" ? testUrl : env === "PROD" ? prodUrl : "";
+console.log(process.env.NODE_ENV);
+const url =
+  env === "development"
+    ? devUrl
+    : env === "test"
+    ? testUrl
+    : env === "production"
+    ? prodUrl
+    : null;
 export const client = axios.create({
   headers: {
     "x-api-key": "some-api-key",
