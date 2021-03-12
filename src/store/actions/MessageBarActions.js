@@ -1,2 +1,0 @@
-export const SHOW_MESSAGE = '[MESSAGE] SHOW MESSAGE';
-export const HIDE_MESSAGE = '[MESSAGE] HIDE MESSAGE';

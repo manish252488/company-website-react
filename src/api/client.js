@@ -5,7 +5,7 @@ const testUrl = "http://domain.com";
 const prodUrl = "https://domain.com";
 
 const url = env === "DEV" ? testUrl : env === "PROD" ? prodUrl : "";
-const Client = axios.create({
+export const client = axios.create({
   headers: {
     "x-api-key": "some-api-key",
   },
@@ -13,7 +13,7 @@ const Client = axios.create({
   baseURL: url,
 });
 
-Client.interceptors.request.use(
+client.interceptors.request.use(
   (config) => {
     let token = store.getState().Auth.token;
     console.log(config.url, token);
@@ -26,12 +26,12 @@ Client.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-Client.interceptors.response.use(
+client.interceptors.response.use(
   (response) => {
-    return response;
+    return extractData(response);
   },
   (error) => {
     return Promise.reject(error);
   }
 );
-export default Client;
+export const extractData = (data) => data.data;

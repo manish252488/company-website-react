@@ -1,4 +1,4 @@
-import * as Actions from "../actions";
+import { SET_USER, SIGN_OUT } from "../actions/actionTypes";
 
 const initialState = {
   user: {
@@ -11,17 +11,17 @@ const initialState = {
 };
 function AuthReducer(state = initialState, action) {
   switch (action.type) {
-    case Actions.SHOW_MESSAGE:
+    case SET_USER:
       return {
         ...state,
-        show: true,
-        message: action.payload.message,
-        type: action.payload.type,
+        user: action.payload.user,
+        token: action.payload.token,
+        isAuthenticated: true,
+        role: action.payload.role,
       };
-    case Actions.HIDE_MESSAGE:
+    case SIGN_OUT:
       return {
-        ...state,
-        show: false,
+        ...initialState,
       };
     default:
       return state;
