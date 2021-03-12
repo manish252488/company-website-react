@@ -6,7 +6,6 @@ import history from "./@history";
 import AppRoute from "./navigation/AppRoute";
 import routesConfig from "./navigation/RoutesConfig";
 import "./App.less";
-import { getLanguages } from "./i18next";
 function App() {
   return (
     <AppContext.Provider value={routesConfig}>

@@ -3,7 +3,6 @@ import "./index.less";
 import { useTranslation } from "react-i18next";
 const Home = (props) => {
   const { t, i18n } = useTranslation();
-  console.log(props);
   return (
     <div
       onClick={() =>
