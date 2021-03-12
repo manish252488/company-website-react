@@ -5,6 +5,7 @@ import store from "./store";
 import history from "./@history";
 import AppRoute from "./navigation/AppRoute";
 import routesConfig from "./navigation/RoutesConfig";
+import "./App.less";
 function App() {
   return (
     <AppContext.Provider value={routesConfig}>
