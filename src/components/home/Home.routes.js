@@ -6,6 +6,7 @@ const HomeRoutes = {
     {
       path: "/",
       component: Home,
+      exact: true,
     },
   ],
 };
