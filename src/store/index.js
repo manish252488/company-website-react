@@ -31,7 +31,7 @@ export const loadLocalStorage = () => {
 
 const persistedState = loadLocalStorage();
 const enhancer = composeEnhancers(applyMiddleware(thunk));
-const store = createStore(createReducer(), persistedState, enhancer);
+const store = createStore(createReducer, persistedState, enhancer);
 
 store.subscribe(() => saveToLocalStorage(store.getState()));
 
