@@ -1,7 +1,6 @@
 import Auth from "../../api/auth";
-import isFunction from "../../utils/Utils";
 import { SET_USER, SIGN_OUT } from "./actionTypes";
-
+import { isFunction } from "../../config/Utils";
 export const signUp = (data, onSuccess, onFailure) => (dispatch) => {
   Auth.signup(data)
     .then((data) => {
