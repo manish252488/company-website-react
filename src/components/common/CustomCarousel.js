@@ -1,27 +1,28 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "nuka-carousel";
 import React from "react";
-import { carousel1, carousel2, carousel3 } from "../../assets";
-import { makeStyles } from "@material-ui/core";
-
-const useStyles = makeStyles({});
+import PropTypes from "prop-types";
+import "./carousel.less";
 const CustomCarousel = (props) => {
-  const classes = useStyles();
+  const { autoPlay, images } = props;
   return (
-    <Carousel className={classes.Carousel}>
-      <div className={classes.Carousel}>
-        <img src={carousel1} alt="carousel" />
-        <p className="legend">Legend 1</p>
-      </div>
-      <div>
-        <img src={carousel2} alt="carousel" />
-        <p className="legend">Legend 2</p>
-      </div>
-      <div>
-        <img src={carousel3} alt="carousel" />
-        <p className="legend">Legend 3</p>
-      </div>
+    <Carousel autoplay={autoPlay} enableKeyboardControls={true}>
+      {images.map((val, index) => (
+        <img key={index} src={val} alt={index} />
+      ))}
     </Carousel>
   );
+};
+CustomCarousel.propTypes = {
+  autoPlay: PropTypes.bool,
+  images: PropTypes.array,
+};
+
+CustomCarousel.defaultProps = {
+  autoPlay: true,
+  images: [
+    "https://p4.wallpaperbetter.com/wallpaper/145/266/383/paris-carousel-eiffel-tower-wallpaper-preview.jpg",
+    "https://live.staticflickr.com/7678/17260399585_b32a535158_b.jpg",
+    "https://media.gettyimages.com/photos/low-angle-view-of-merrygoround-and-eiffel-tower-at-sunset-picture-id1140679987?s=612x612",
+  ],
 };
 export default CustomCarousel;
