@@ -1,0 +1,84 @@
+@import "../../Base.less";
+.auth-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  min-height: calc(100vh - 10vh);
+  .image {
+    width: 70%;
+    background-color: #ddd;
+    .nav-bar {
+      width: auto;
+      background-color: #333;
+      margin: 50px;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      border-radius: 10px;
+      opacity: 0.8;
+      position: relative;
+      top: 70%;
+      svg {
+        color: #fff;
+        cursor: pointer;
+        padding: 5px;
+        transition: 0.1s;
+        border-radius: 10px;
+        &:hover {
+          background-color: #fff;
+          color: #333;
+        }
+      }
+    }
+  }
+  .MuiCardContent-root {
+    width: 30%;
+    padding: 50px;
+    .tabs {
+      margin-top: 10px;
+    }
+    .MuiTypography-root {
+      margin-bottom: 40px;
+      .MuiSvgIcon-root {
+        margin-bottom: -24px;
+      }
+    }
+    .MuiButtonGroup-root {
+      width: 100%;
+      justify-content: center;
+      .active {
+        background-color: @primary-color-100;
+        color: @white;
+      }
+    }
+  }
+}
+@media @small {
+  .auth-card {
+    flex-direction: column;
+  }
+}
+.login-form {
+  width: 70%;
+  margin: auto;
+  div {
+    margin-top: 30px;
+  }
+  button {
+    margin-top: 10%;
+    background-color: @primary-color-100;
+    color: @primary-color-500;
+  }
+  .MuiDivider-middle {
+    margin-top: 30px;
+  }
+  .social-logins {
+    margin-top: 20px;
+    .MuiButtonBase-root {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}
