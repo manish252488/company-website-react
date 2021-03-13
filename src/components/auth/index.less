@@ -37,12 +37,21 @@
     width: 30%;
     padding: 50px;
     .tabs {
-      margin-top: 40px;
-      padding: 10px;
+      margin-top: 10px;
+    }
+    .MuiTypography-root {
+      margin-bottom: 40px;
+      .MuiSvgIcon-root {
+        margin-bottom: -24px;
+      }
     }
     .MuiButtonGroup-root {
       width: 100%;
       justify-content: center;
+      .active {
+        background-color: @primary-color-100;
+        color: @white;
+      }
     }
   }
 }

@@ -3,14 +3,16 @@ import {
   ButtonGroup,
   Card,
   CardContent,
+  CardHeader,
   Paper,
+  Typography,
 } from "@material-ui/core";
 import React, { useState } from "react";
 import { renderIfElse } from "../../config/Utils";
 import Login from "./Login";
 import SignUp from "./Signup";
 import "./index.less";
-import { ContactPhone, Home, Settings } from "@material-ui/icons";
+import { ContactPhone, Facebook, Home, Settings } from "@material-ui/icons";
 const tabs = {
   login: "login",
   signup: "signup",
@@ -27,6 +29,10 @@ const Authpage = (props) => {
         </div>
       </div>
       <CardContent>
+        <Typography align="center" variant="h4">
+          <Facebook style={{ fontSize: 70 }} />
+          Some title
+        </Typography>
         <ButtonGroup>
           <Button
             className={tab === tabs.login ? "active" : ""}
