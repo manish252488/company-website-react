@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.less";
 import { useTranslation } from "react-i18next";
-import Fade from "react-reveal";
+import Footer from "../common/Footer";
 const Home = (props) => {
   const { t, i18n } = useTranslation();
-  return <div></div>;
+  return <Footer />;
 };
 export default Home;
