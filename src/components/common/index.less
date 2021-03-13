@@ -1,0 +1,52 @@
+@import "../../Base.less";
+.App {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  .custom-card {
+    width: 70%;
+    margin: auto;
+    overflow: unset !important;
+    background-color: @primary-color-500 !important;
+    margin-top: 100px !important;
+    height: 350px;
+    .custom-card-header {
+      width: 80%;
+      background-color: @primary-color-200;
+      margin: auto;
+      position: relative;
+      top: -26px;
+      border-radius: 10px;
+      .MuiCardHeader-action {
+        margin-top: auto;
+        background-color: transparent;
+        button {
+          background-color: @primary-color-500;
+          font-weight: @fontWeight;
+          color: @white;
+          outline: none;
+        }
+        .selected {
+          transform: scale(1.2);
+          z-index: 1;
+          transition: 0.5s;
+        }
+      }
+      .MuiCardHeader-title {
+        font-weight: @fontWeightSecondary;
+        text-transform: capitalize;
+        color: @primary-color-900;
+        font-family: @fontFamily;
+      }
+    }
+  }
+  footer {
+    width: 100%;
+    background-color: @primary-color-900;
+    position: absolute;
+    bottom: 0;
+  }
+}

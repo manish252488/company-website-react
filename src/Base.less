@@ -1,13 +1,21 @@
-@primary-color-100: #333;
-@primary-color-200: #333;
-@primary-color-300: #333;
-@primary-color-400: #333;
-@primary-color-500: #333;
-@secondary-color-100: #111;
-@secondary-color-200: #111;
-@secondary-color-300: #111;
-@secondary-color-400: #111;
-@secondary-color-500: #111;
+@primary-color-100: #753a88;
+@primary-color-200: #834e94;
+@primary-color-300: #9161a0;
+@primary-color-400: #9e75ac;
+@primary-color-500: #ac89b8;
+@primary-color-600: #c8b0cf;
+@primary-color-700: #d6c4db;
+@primary-color-800: #e3d8e7;
+@primary-color-900: #e3d8e7;
+@secondary-color-100: #cc2b5e;
+@secondary-color-200: #d1406e;
+@secondary-color-300: #d6557e;
+@secondary-color-400: #db6b8e;
+@secondary-color-500: #e0809e;
+@secondary-color-600: #e695af;
+@secondary-color-700: #ebaabf;
+@secondary-color-800: #f0bfcf;
+@secondary-color-900: #f5d5df;
 @title-color: green;
 @title-secondary-color: red;
 @body-color: blue;
@@ -17,13 +25,18 @@
 @failed: pink;
 @small: 375px;
 @mobile: 767px;
-
+@fontWeight: 600;
+@fontWeightSecondary: 400 !important;
 @content-width: 1000px;
-
+@fontFamily: Arial, Helvetica, sans-serif;
 @mixin clearfix() {
   &::after {
     content: "";
     display: block;
     clear: both;
   }
+}
+
+.MuiAppBar-colorPrimary {
+  background-color: @primary-color-100 !important;
 }

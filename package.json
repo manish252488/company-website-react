@@ -15,10 +15,10 @@
     "i18next-browser-languagedetector": "^6.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.1",
     "react-i18next": "^11.8.10",
     "react-redux": "^7.2.2",
+    "react-responsive-carousel": "^3.2.13",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "redux": "^4.0.5",
@@ -26,6 +26,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "start-win": "react-app-rewired start",
     "start": "REACT_APP_NODE_ENV=development react-app-rewired start",
     "build": "REACT_APP_NODE_ENV=development react-app-rewired build",
     "test": "REACT_APP_NODE_ENV=development react-app-rewired test",
@@ -58,6 +59,7 @@
   },
   "devDependencies": {
     "less": "^3.11.1",
-    "less-loader": "^5.0.0"
+    "less-loader": "^5.0.0",
+    "react-app-rewired": "^2.1.8"
   }
 }
