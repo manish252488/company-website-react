@@ -1,6 +1,5 @@
+import Authpage from ".";
 import authRoles from "../../config/authRoles";
-import Login from "./Login";
-import SignUp from "./Signup";
 /**
  *      {
  *        path: '/',
@@ -12,13 +11,8 @@ const AuthRoutes = {
   auth: authRoles.guest,
   routes: [
     {
-      path: "/login",
-      component: Login,
-      exact: true,
-    },
-    {
-      path: "/sign-up",
-      component: SignUp,
+      path: "/auth",
+      component: Authpage,
       exact: true,
     },
   ],
