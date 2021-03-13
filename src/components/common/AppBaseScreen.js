@@ -1,6 +1,7 @@
 import { AppBar, Toolbar } from "@material-ui/core";
 import React from "react";
 import "./index.less";
+import Footer from "./Footer";
 const AppBaseScreen = (props) => {
   return (
     <div className="App">
@@ -8,7 +9,7 @@ const AppBaseScreen = (props) => {
         <Toolbar></Toolbar>
       </AppBar>
       <div>{props.children}</div>
-      <footer>footer</footer>
+      <Footer />
     </div>
   );
 };
