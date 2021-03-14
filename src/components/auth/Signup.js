@@ -1,4 +1,5 @@
-import { Button, TextField } from "@material-ui/core";
+import { Button, Chip, Divider, TextField } from "@material-ui/core";
+import { Facebook, Instagram } from "@material-ui/icons";
 import React, { useState } from "react";
 
 const SignUp = (props) => {
@@ -52,6 +53,11 @@ const SignUp = (props) => {
       />
 
       <Button fullWidth>SignUp</Button>
+      <Divider variant="middle" />
+      <div className="social-logins">
+        <Chip avatar={<Facebook />} label="Facebook" clickable />
+        <Chip avatar={<Instagram />} label="Instagram" clickable />
+      </div>
     </div>
   );
 };

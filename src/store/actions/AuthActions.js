@@ -1,5 +1,5 @@
 import Auth from "../../api/auth";
-import { SET_USER, SIGN_OUT } from "./actionTypes";
+import { HIDE_AUTH, SET_USER, SHOW_AUTH, SIGN_OUT } from "./actionTypes";
 import { isFunction } from "../../config/Utils";
 export const signUp = (data, onSuccess, onFailure) => (dispatch) => {
   Auth.signup(data)
@@ -61,5 +61,18 @@ export const signOut = (onSuccess, onFailure) => (dispatch) => {
     .catch((err) => {
       console.log("error sign up", err);
       if (isFunction(onFailure)) onFailure(err.message);
+    });
+};
+
+export const showAuthPage = () => {
+  return (dispatch) =>
+    dispatch({
+      type: SHOW_AUTH,
+    });
+};
+export const hideAuthPage = () => {
+  return (dispatch) =>
+    dispatch({
+      type: HIDE_AUTH,
     });
 };

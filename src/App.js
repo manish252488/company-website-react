@@ -9,15 +9,15 @@ import "./App.less";
 import AppBaseScreen from "./components/common/AppBaseScreen";
 function App() {
   return (
-    <AppBaseScreen>
-      <AppContext.Provider value={routesConfig}>
-        <Provider store={store}>
+    <AppContext.Provider value={routesConfig}>
+      <Provider store={store}>
+        <AppBaseScreen>
           <Router history={history}>
             <AppRoute />
           </Router>
-        </Provider>
-      </AppContext.Provider>
-    </AppBaseScreen>
+        </AppBaseScreen>
+      </Provider>
+    </AppContext.Provider>
   );
 }
 

@@ -16,6 +16,12 @@
 @secondary-color-700: #ebaabf;
 @secondary-color-800: #f0bfcf;
 @secondary-color-900: #f5d5df;
+
+@title: #753a88;
+@secondary-text: #c8b0cf;
+@title-font-size: 20px;
+@body-font-size: 17px;
+@small-font-size: 14px;
 @title-color: green;
 @title-secondary-color: red;
 @body-color: blue;
@@ -23,12 +29,12 @@
 @gray: #ddd;
 @success: green;
 @failed: pink;
-
+@fontWeight: 600;
 @screen-xs-min: 480px;
 @screen-sm-min: 768px;
 @screen-md-min: 992px;
 @screen-lg-min: 1200px;
-
+@fontWeightSecondary: 500;
 @screen-xs-max: (@screen-sm-min - 1);
 @screen-sm-max: (@screen-md-min - 1);
 @screen-md-max: (@screen-lg-min - 1);
@@ -53,4 +59,47 @@
 
 .MuiAppBar-colorPrimary {
   background-color: @primary-color-100 !important;
+}
+.MuiCardHeader-title {
+  font-size: @title-font-size !important;
+  font-weight: @fontWeight !important;
+  text-transform: capitalize;
+}
+.MuiTypography-h3 {
+  font-size: @body-font-size !important;
+  font-weight: @fontWeight !important;
+  text-transform: capitalize;
+}
+.MuiTypography-body1 {
+  color: @white;
+  font-size: @small-font-size !important;
+}
+.title-light {
+  color: @primary-color-900 !important;
+}
+.font-sm {
+  font-size: @small-font-size !important;
+}
+.MuiButton-containedPrimary {
+  background-color: @primary-color-100 !important;
+}
+.MuiInput-underline:after {
+  border-bottom: 2px solid @primary-color-100 !important;
+}
+.Mui-focused {
+  color: @primary-color-100 !important;
+}
+.MuiButton-label {
+  font-size: @small-font-size;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  width: 2px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: @primary-color-100;
 }

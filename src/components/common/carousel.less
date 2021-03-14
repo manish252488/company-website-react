@@ -1,8 +1,17 @@
+@import "../../Base.less";
 .slider {
   margin: auto;
+  .slider-control-centerright,
+  .slider-control-centerleft {
+    button {
+      background: @primary-color-100 !important;
+      outline: none;
+      border: none;
+    }
+  }
   .slider-frame {
     .slider-list {
-      height: 50vh !important;
+      max-height: 80vh !important;
       display: flex !important;
       justify-content: center;
       .slider-slide {

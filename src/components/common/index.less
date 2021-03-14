@@ -6,15 +6,20 @@
   flex-flow: column;
   justify-content: space-between;
   .custom-card {
-    width: 70%;
+    width: 90%;
     margin: auto;
+    opacity: 0.9;
     overflow: unset !important;
-    background-color: @primary-color-500 !important;
+    background: linear-gradient(
+      to bottom right,
+      @secondary-color-900,
+      @primary-color-900
+    );
     margin-top: 100px !important;
     height: 350px;
     .custom-card-header {
       width: 80%;
-      background-color: @primary-color-200;
+      background-color: @secondary-color-100;
       margin: auto;
       position: relative;
       top: -26px;
@@ -23,10 +28,13 @@
         margin-top: auto;
         background-color: transparent;
         button {
-          background-color: @primary-color-500;
+          background-color: @secondary-color-500;
           font-weight: @fontWeight;
           color: @white;
           outline: none;
+          .MuiButton-label {
+            font-size: @body-font-size !important;
+          }
         }
         .selected {
           transform: scale(1.2);
@@ -43,16 +51,8 @@
     }
   }
   .footer {
-    position: absolute;
-    width: 100%;
-    .background {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-      background-size: cover;
-      background-color: aqua;
-    }
+    background-color: @primary-color-200;
+    margin-top: 25px;
     .content {
       display: flex;
       flex-direction: row;
@@ -60,37 +60,52 @@
       .col {
         width: calc(100vw - 75vw);
         height: 180px;
-        background-color: #333;
-        opacity: 0.7;
         align-self: center;
-        margin-top: 20px;
-        padding: 20px 40px;
+        margin-top: 10px;
+        padding: 5px 10px;
+        .MuiListItemIcon-root {
+          min-width: auto !important;
+          margin-right: 5px;
+        }
+        .MuiListItem-gutters {
+          padding-left: unset !important;
+        }
+        .MuiSvgIcon-root {
+          color: @primary-color-800 !important;
+        }
+      }
+      .col3 {
+        .MuiListItem-root {
+          cursor: pointer;
+          text-overflow: clip;
+          overflow-wrap: break-word;
+          &:hover {
+            text-decoration: underline @secondary-color-900;
+          }
+        }
       }
     }
     .social-icons {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      background-color: #333;
+      background-color: @primary-color-400;
       opacity: 0.8;
-      border-radius: 5px;
-      margin: 10px;
       div {
         width: 40px;
-        margin: 20px;
+        margin: 10px;
         height: 40px;
-        background-color: #fff;
+        background-color: @secondary-color-900;
         border-radius: 50%;
         box-shadow: 1px 4px 2px #333;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .MuiSvgIcon-root {
+          color: @primary-color-100;
+        }
       }
-    }
-    .bottom {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      background-color: #ddd;
-      min-height: 10px;
     }
   }
 }
@@ -101,8 +116,25 @@
       .content {
         flex-direction: column;
         .col {
-          width: calc(100vw - 40vw);
+          width: calc(100vw - 10vw);
+          height: auto;
         }
+      }
+    }
+  }
+}
+
+.more-options {
+  div {
+    left: -50px !important;
+    .MuiListItemIcon-root {
+      .MuiSvgIcon-root {
+        color: @primary-color-100;
+      }
+    }
+    .MuiListItemText-root {
+      .MuiTypography-root {
+        color: @primary-color-200 !important;
       }
     }
   }

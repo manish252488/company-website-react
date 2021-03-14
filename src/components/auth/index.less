@@ -1,16 +1,23 @@
 @import "../../Base.less";
 .auth-card {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  transform: translate(2.5%, 2.5%);
+  z-index: 99999999;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px;
-  min-height: calc(100vh - 10vh);
+  min-height: calc(100vh - 5vh);
+  max-height: calc(100vh - 5vh);
   .image {
     width: 70%;
     background-color: #ddd;
+    background-size: cover;
     .nav-bar {
       width: auto;
-      background-color: #333;
+      background-color: #fff;
       margin: 50px;
       padding: 20px 10px;
       display: flex;
@@ -21,14 +28,14 @@
       position: relative;
       top: 70%;
       svg {
-        color: #fff;
+        color: @primary-color-100;
         cursor: pointer;
         padding: 5px;
         transition: 0.1s;
         border-radius: 10px;
         &:hover {
-          background-color: #fff;
-          color: #333;
+          background-color: @primary-color-100;
+          color: @secondary-color-900;
         }
       }
     }
@@ -38,11 +45,15 @@
     padding: 50px;
     .tabs {
       margin-top: 10px;
+      max-height: 49vh;
+      overflow-y: auto;
+      padding-bottom: 20px;
     }
     .MuiTypography-root {
       margin-bottom: 40px;
       .MuiSvgIcon-root {
         margin-bottom: -24px;
+        color: @secondary-color-100;
       }
     }
     .MuiButtonGroup-root {
@@ -55,21 +66,32 @@
     }
   }
 }
-@media @small {
+@media @phone {
   .auth-card {
     flex-direction: column;
+    .image {
+      width: 100%;
+    }
+    .MuiCardContent-root {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .login-form {
+    width: 100%;
   }
 }
 .login-form {
   width: 70%;
+  max-height: 50%;
   margin: auto;
-  div {
-    margin-top: 30px;
-  }
   button {
     margin-top: 10%;
     background-color: @primary-color-100;
-    color: @primary-color-500;
+    color: @primary-color-900;
+    &:hover {
+      color: @primary-color-100;
+    }
   }
   .MuiDivider-middle {
     margin-top: 30px;
@@ -77,8 +99,17 @@
   .social-logins {
     margin-top: 20px;
     .MuiButtonBase-root {
+      background-color: @secondary-color-100;
       width: 100%;
       margin-top: 10px;
+      .MuiSvgIcon-root {
+        color: @primary-color-800;
+      }
+      .MuiChip-label {
+        font-weight: @fontWeight;
+        color: @primary-color-800;
+        font-family: @fontFamily;
+      }
     }
   }
 }

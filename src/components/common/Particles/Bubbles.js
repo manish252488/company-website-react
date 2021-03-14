@@ -1,13 +1,104 @@
 import React from "react";
 import Particles from "react-particles-js";
 import PropTypes from "prop-types";
-const Bubbles = (props) => {
-  const { height, number, colors, speed, width, size, animSpeed } = props;
-  return (
-    <Particles
-      height={height}
-      width={width}
-      params={{
+import "./index.less";
+/* const config1 = {
+  particles: {
+    number: {
+      value: number,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: colors,
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#000000",
+      },
+      image: {
+        src: "img/github.svg",
+        width: 100,
+        height: 100,
+      },
+    },
+    opacity: {
+      value: 0.4,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false,
+      },
+    },
+    size: {
+      value: size,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 2,
+        size_min: 0.1,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable_auto: true,
+      distance: 100,
+      color: "#fff",
+      opacity: 1,
+      width: 1,
+      condensed_mode: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 600,
+      },
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200,
+      },
+    },
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "bubble",
+      },
+      onclick: {
+        enable: true,
+        mode: "repulse",
+      },
+    },
+    modes: {
+      bubble: {
+        distance: 250,
+        duration: 2,
+        size: 0,
+        opacity: 0,
+      },
+      repulse: {
+        distance: 400,
+        duration: 4,
+      },
+    },
+  },
+  retina_detect: true,
+}{
         particles: {
           number: {
             value: number,
@@ -60,6 +151,111 @@ const Bubbles = (props) => {
             },
           },
         },
+      } */ const Bubbles = (
+  props
+) => {
+  const { height, number, colors, speed, width, size, animSpeed } = props;
+  return (
+    <Particles
+      className="Particles"
+      height={height}
+      width={width}
+      params={{
+        particles: {
+          number: {
+            value: number,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: colors,
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.9,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: size,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable_auto: true,
+            distance: 100,
+            color: "#333",
+            opacity: 1,
+            width: 1,
+            condensed_mode: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 600,
+            },
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          events: {
+            onhover: {
+              enable: true,
+              mode: "bubble",
+            },
+            onclick: {
+              enable: true,
+              mode: "repulse",
+            },
+          },
+          modes: {
+            bubble: {
+              distance: 250,
+              duration: 2,
+              size: 0,
+              opacity: 0,
+            },
+            repulse: {
+              distance: 400,
+              duration: 4,
+            },
+          },
+        },
+        retina_detect: true,
       }}
     />
   );
