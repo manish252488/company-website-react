@@ -35,7 +35,7 @@ const Header = (props) => {
           <Facebook />
         </IconButton>
         <Typography variant="h6" className={classes.title}>
-          News
+          Some Name
         </Typography>
         <div className="web-view">
           <Button
