@@ -5,6 +5,20 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  .MuiAppBar-root{
+    .MuiToolbar-root{
+      .web-view{
+        .MuiButtonBase-root{
+          .MuiButton-label{
+            font-size: 12px;
+          }
+        }
+      }
+      .login-button{
+        background-color: @secondary-color-100;
+      }
+    }
+  }
   .custom-card {
     width: 90%;
     margin: auto;
@@ -84,6 +98,13 @@
           }
         }
       }
+      .col1{
+        .makeStyles-root-8{
+          .MuiButtonBase-root{
+            background-color: #1111;
+          }
+        }
+      }
       .col3 {
         .MuiListItem-root {
           cursor: pointer;
@@ -121,7 +142,7 @@
   }
 }
 
-@media @phone {
+@media @phone-strict {
   .App {
     .footer {
       .content {

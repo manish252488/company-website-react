@@ -71,7 +71,7 @@
     }
   }
 }
-@media @phone {
+@media @phone-strict {
   .auth-card {
     flex-direction: column;
     .image {
@@ -80,10 +80,37 @@
     .MuiCardContent-root {
       width: 100%;
       padding: 0;
+      .tabs{
+        height: 30vh;
+      }
     }
   }
   .login-form {
     width: 100%;
+  }
+  .custom-card {
+    .custom-card-header{
+      flex-direction: column;
+      justify-content: center;
+      .MuiCardHeader-content{
+        align-self: flex-start;
+        .MuiTypography-root{
+        font-size: 15px !important;
+        }
+      }
+      .MuiCardHeader-action{
+        align-self: auto;
+        margin-top: 20px !important;
+        .MuiButtonGroup-root{
+          .MuiButtonBase-root{
+            min-width: 64px !important;
+            .MuiButton-label{
+              font-size: 10px !important;
+            }
+          }
+        }
+      }
+    }
   }
 }
 .login-form {
