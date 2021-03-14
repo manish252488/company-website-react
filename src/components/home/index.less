@@ -23,15 +23,82 @@
     }
   }
 }
+.image-tab{
+  width: 100%;
+  background-size: cover;
+  min-height: 40vh;
+  div{
+    color:#fff;
+    background-color: #1111;
+    padding: 5px;
+    position: relative;
+    top: 12vw;
+    font-size: @body-font-size;
+  }
+}
+.left-grid{
+  .react-reveal{
+    .MuiPaper-root{
+      .MuiCardContent-root{
+        .MuiPaper-root{
+          padding: 10px 40px;
+          background-color: transparent;
+          box-shadow: none;
+          color: #111;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+.about-carousel{
+  .slider-frame{
+    height: auto;
+    .slider-list{
+      .slider-slide{
+        .custom-card{
+          height: 100vh;
+          .MuiCardHeader-root{
+            max-width: 20vw;
+            margin: unset;
+            margin-left: 40px;
+          }
+          .MuiCardContent-root{
+            display: flex;
+            height: 50%;
+            .MuiPaper-root{
+              background-color: @primary-color-700;
+              width: 50%;
+              min-height: 25%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media @phone-strict {
   .custom-grid {
     flex-direction: column;
-
+    .MuiGrid-root{
+      .react-reveal{
+        .MuiPaper-root{
+          height: auto;
+        }
+      }
+    }
     .MuiGrid-grid-xs-true {
       flex-grow: unset !important;
     }
   }
-
+.image-tab{
+  width: 100%;
+  background-size: cover;
+  min-height: 35vh;
+  div{
+    top: 20vw;
+  }
+}
   .content-card {
     .MuiPaper-root {
       flex-direction: column;
@@ -40,4 +107,31 @@
       }
     }
   }
+
+  .about-carousel{
+  .slider-frame{
+    height: auto;
+    .slider-list{
+      .slider-slide{
+        .custom-card{
+          height: 100vh;
+          .MuiCardHeader-root{
+            max-width: 20vw;
+            margin: unset;
+            margin-left: 40px;
+          }
+          .MuiCardContent-root{
+            flex-direction: column;
+            .MuiPaper-root{
+              background-color: @primary-color-700;
+              width: 100%;
+              min-height: 100%;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 }

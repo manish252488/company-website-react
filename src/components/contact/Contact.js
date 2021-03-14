@@ -1,13 +1,14 @@
 import { Card, CardContent, Paper, Typography } from "@material-ui/core";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Fade } from "react-reveal";
 import CustomCard from "../common/CustomCard";
 import GoogleMap from "../common/GoogleMap";
-import Bubbles from "../common/Particles/Bubbles";
 import ProfileCard from "../common/ProfileCard";
 import ContactForm from "./ContactForm";
 import "./index.less";
 const Contact = (props) => {
+  const { t } = useTranslation();
   return (
     <div className="contact-card">
       <Fade bottom>
@@ -16,6 +17,13 @@ const Contact = (props) => {
           header={null}
           cardContent={[<ProfileCard />, <ProfileCard />, <ProfileCard />]}
         />
+      </Fade>
+      <Fade bottom>
+        <Card className="typo-card">
+          <CardContent>
+            <Typography variant="h2">{t("feelFree")}</Typography>
+          </CardContent>
+        </Card>
       </Fade>
       <Fade bottom>
         <CustomCard

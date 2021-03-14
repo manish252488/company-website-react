@@ -14,8 +14,20 @@
           }
         }
       }
+      .mobile-view{
+        .more-options{
+          .MuiButtonBase-root{
+            padding: 2px;
+            margin-left: 2px;
+          }
+        }
+      }
       .login-button{
         background-color: @secondary-color-100;
+        min-width: auto !important;
+         .MuiButton-label{
+            font-size: 12px;
+          }
       }
     }
   }
@@ -30,7 +42,7 @@
       @primary-color-900
     );
     margin-top: 50px !important;
-    height: 350px;
+    min-height: 350px;
     .custom-card-header {
       width: 80%;
       background-color: @secondary-color-100;
@@ -47,7 +59,7 @@
           color: @white;
           outline: none;
           .MuiButton-label {
-            font-size: @body-font-size !important;
+            font-size: 10px !important;
           }
         }
         .selected {
@@ -78,7 +90,6 @@
         margin-top: 10px;
         padding: 5px 10px;
         .MuiListItemIcon-root {
-          min-width: auto !important;
           margin-right: 5px;
         }
         .MuiListItem-gutters {
@@ -144,6 +155,17 @@
 
 @media @phone-strict {
   .App {
+     .MuiAppBar-root{
+    .MuiToolbar-root{
+     .makeStyles-menuButton-4{
+        padding: 1px;
+        margin-right: 0;
+      }
+      .makeStyles-title-5 {
+        font-size: 17px;
+      }
+    }
+  }
     .footer {
       .content {
         flex-direction: column;
@@ -208,7 +230,7 @@
                     box-shadow: 1px 1px 5px #333;
                     border-radius: 50%;
                     top : -70%;
-                    z-index: 9999;
+                    z-index: 10;
                     margin: auto;
                     background-color: #333;
                     left: 0;

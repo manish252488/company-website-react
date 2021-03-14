@@ -97,10 +97,12 @@ const Authpage = (props) => {
           </div>
         </div>
         <CardContent>
-          <Typography align="center" variant="h4">
-            <Facebook style={{ fontSize: 70 }} />
-          </Typography>
-          <ButtonGroup>
+          <div className="web-view">
+            <Typography align="center" variant="h4">
+              <Facebook style={{ fontSize: 70 }} />
+            </Typography>
+          </div>
+          <ButtonGroup style={{ marginTop: 5 }}>
             <Button
               className={tab === tabs.login ? "active" : ""}
               onClick={() => setTab(tabs.login)}

@@ -3,9 +3,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./carousel.less";
 const CustomCarousel = (props) => {
-  const { autoPlay, images, width } = props;
+  const { autoPlay, images, width, className } = props;
   return (
-    <Carousel width={width} autoplay={autoPlay} enableKeyboardControls={true}>
+    <Carousel
+      className={className}
+      width={width}
+      swiping={true}
+      autoplay={autoPlay}
+      autoplayReverse={true}
+      enableKeyboardControls={true}
+    >
       {props.components.length <= 0 &&
         images.map((val, index) => <img key={index} src={val} alt={index} />)}
       {props.components.length >= 0 && props.components}
