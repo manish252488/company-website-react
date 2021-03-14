@@ -1,4 +1,3 @@
-import * as Actions from "../actions";
 import { HIDE_MESSAGE, SHOW_MESSAGE } from "../actions/actionTypes";
 
 const initialState = {

@@ -3,7 +3,7 @@ import { Facebook, Instagram } from "@material-ui/icons";
 import React, { useState } from "react";
 
 const SignUp = (props) => {
-  const [state, setState] = useState({
+  const [state] = useState({
     fName: "",
     mName: "",
     email: "",

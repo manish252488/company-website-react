@@ -14,14 +14,7 @@ import { renderIfElse } from "../../config/Utils";
 import Login from "./Login";
 import SignUp from "./Signup";
 import "./index.less";
-import {
-  CloseOutlined,
-  ContactPhone,
-  Facebook,
-  Home,
-  Instagram,
-  Settings,
-} from "@material-ui/icons";
+import { CloseOutlined, Facebook, Instagram } from "@material-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { hideAuthPage } from "../../store/actions";
 import History from "../../@history";

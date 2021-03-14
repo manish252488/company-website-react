@@ -6,9 +6,9 @@ import React, { useState } from "react";
 import "./index.less";
 const Login = (props) => {
   const [user, setUser] = useState("");
-  const [userError, setUserError] = useState(null);
+  const [userError] = useState(null);
   const [password, setPassword] = useState("");
-  const [passwordError, setPasswordError] = useState(null);
+  const [passwordError] = useState(null);
   const login = () => {};
   return (
     <div className="login-form">

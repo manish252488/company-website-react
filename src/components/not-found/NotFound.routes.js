@@ -1,6 +1,3 @@
-import React from "react";
-import { Redirect } from "react-router";
-
 const { default: authRoles } = require("../../config/authRoles");
 const { default: NotFound } = require("./NotFound");
 

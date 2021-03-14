@@ -3,7 +3,6 @@ import {
   Facebook,
   LocationOnOutlined,
   MailOutlined,
-  MoreOutlined,
   PhoneAndroidOutlined,
   PhoneIphoneOutlined,
 } from "@material-ui/icons";

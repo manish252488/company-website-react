@@ -189,7 +189,7 @@ import "./index.less";
             random: true,
             anim: {
               enable: true,
-              speed: 1,
+              speed: speed,
               opacity_min: 0.1,
               sync: false,
             },
@@ -199,7 +199,7 @@ import "./index.less";
             random: true,
             anim: {
               enable: true,
-              speed: 2,
+              speed: animSpeed,
               size_min: 0.1,
               sync: false,
             },
@@ -214,20 +214,6 @@ import "./index.less";
               enable: false,
               rotateX: 600,
               rotateY: 600,
-            },
-          },
-          move: {
-            enable: true,
-            speed: 1,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200,
             },
           },
         },
