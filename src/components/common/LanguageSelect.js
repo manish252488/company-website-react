@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   paper: {
-    marginRight: theme.spacing(2),  
+    marginRight: theme.spacing(2),
+    zIndex: 9999,
   },
 }));
 
@@ -93,7 +94,7 @@ export default function LanguageSelect() {
                 placement === "bottom" ? "center top" : "center bottom",
             }}
           >
-            <Paper>
+            <Paper className={classes.paper}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList
                   autoFocusItem={open}
