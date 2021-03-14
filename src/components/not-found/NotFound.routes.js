@@ -12,9 +12,6 @@ const NotFoundRoutes = {
       exact: true,
       component: NotFound,
     },
-    {
-      component: () => <Redirect to="/404" />,
-    },
   ],
 };
 export default NotFoundRoutes;

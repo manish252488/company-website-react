@@ -28,7 +28,7 @@ const AppBaseScreen = (props) => {
       />
       <Authpage />
       <Header />
-      <div style={{ marginTop: 25 }}>{props.children}</div>
+      <div style={{ marginTop: 25, minHeight: "40vh" }}>{props.children}</div>
       <Fade bottom>
         <Footer />
       </Fade>

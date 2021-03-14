@@ -13,6 +13,7 @@ import {
   ListItemText,
   Typography,
 } from "@material-ui/core";
+import LanguageSelect from "../common/LanguageSelect";
 const Footer = (props) => {
   return (
     <div className="footer">
@@ -29,6 +30,7 @@ const Footer = (props) => {
               </ListItemText>
             </ListItem>
           </List>
+          <LanguageSelect />
         </div>
         <div className="col col2">
           <Typography variant="h3" className="title-light">

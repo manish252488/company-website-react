@@ -1,13 +1,13 @@
-import Home from ".";
 import authRoles from "../../config/authRoles";
-const HomeRoutes = {
+import Contact from "./Contact";
+const ContactRoutes = {
   auth: authRoles.guest,
   routes: [
     {
-      path: "/",
-      component: Home,
+      path: "/contacts",
+      component: Contact,
       exact: true,
     },
   ],
 };
-export default HomeRoutes;
+export default ContactRoutes;

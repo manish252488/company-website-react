@@ -1,13 +1,13 @@
-import Home from ".";
 import authRoles from "../../config/authRoles";
-const HomeRoutes = {
+import Products from "./Products";
+const ProductsRoutes = {
   auth: authRoles.guest,
   routes: [
     {
-      path: "/",
-      component: Home,
+      path: "/products",
+      component: Products,
       exact: true,
     },
   ],
 };
-export default HomeRoutes;
+export default ProductsRoutes;

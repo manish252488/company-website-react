@@ -10,7 +10,6 @@ import { Facebook, Person } from "@material-ui/icons";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { showAuthPage } from "../../store/actions";
-import LanguageSelect from "./LanguageSelect";
 import MoreOptions from "./MoreOptions";
 const Header = (props) => {
   const classes = useStyles();
@@ -30,7 +29,6 @@ const Header = (props) => {
         <Typography variant="h6" className={classes.title}>
           News
         </Typography>
-        <LanguageSelect />
         <Button
           onClick={login}
           startIcon={<Person />}
