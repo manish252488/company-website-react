@@ -26,6 +26,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { hideAuthPage } from "../../store/actions";
 import History from "../../@history";
 import { loginPage } from "../../assets";
+import Bubbles from "../common/Particles/Bubbles";
 
 const tabs = {
   login: "login",
@@ -69,6 +70,26 @@ const Authpage = (props) => {
           <CloseOutlined fontSize="inherit" />
         </IconButton>
         <div className="image" style={{ backgroundImage: `url(${loginPage})` }}>
+          <div className="bubble">
+            <Bubbles
+              width="100%"
+              height="100%"
+              number={70}
+              colors={[
+                "#9161a0",
+                "#e3d8e7",
+                "#d6c4db",
+                "#ac89b8",
+                "#cc2b5e",
+                "#d6557e",
+                "#e0809e",
+                "#ebaabf",
+              ]}
+              speed={2}
+              size={15}
+              animSpeed={5}
+            />
+          </div>
           <div className="nav-bar">
             <Typography variant="h6">Follow us on:</Typography>
             <Facebook onClick={() => History.push("/")} />

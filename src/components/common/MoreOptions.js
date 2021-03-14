@@ -21,7 +21,7 @@ const lang = [
   {
     icon: <HomeOutlined />,
     name: "Home",
-    path: "Home",
+    path: "/",
   },
   {
     icon: <SettingsOutlined />,

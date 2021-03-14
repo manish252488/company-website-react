@@ -15,7 +15,7 @@
       @secondary-color-900,
       @primary-color-900
     );
-    margin-top: 100px !important;
+    margin-top: 50px !important;
     height: 350px;
     .custom-card-header {
       width: 80%;
@@ -133,6 +133,22 @@
       }
     }
   }
+  
+.profile-card{
+  width: 100% !important;
+  margin-top: 10px;
+             .cover{
+               width: 100%;
+                .profile-image{
+                   top:-50px !important;
+                   border-width: 4px !important;
+                }
+            }
+            .paper-content{
+                  width: 100%;
+            }
+            
+        }
 }
 
 .more-options {
@@ -150,3 +166,56 @@
     }
   }
 }
+
+.profile-card{
+            overflow: hidden;
+            width: 20%;
+             .cover{
+                width: 100%;
+                height: 25%;
+                background-color: @secondary-color-100;
+                .Particles{
+                    width: inherit;
+                    position: relative;
+                    z-index: 1;
+                }
+                .profile-image{
+                    position: relative;
+                    width: 100px;
+                    height: 100px;
+                    border: 5px solid @primary-color-100;
+                    box-shadow: 1px 1px 5px #333;
+                    border-radius: 50%;
+                    top : -70%;
+                    z-index: 9999;
+                    margin: auto;
+                    background-color: #333;
+                    left: 0;
+                    background-size: cover  !important;
+                }
+            }
+            .paper-content{
+                    height: 100%;
+                background-color: @primary-color-700 !important;
+                .content{
+                  position: relative;
+                  top: 20%;
+                  padding: 5px;
+                  .MuiTypography-h3{
+                    text-align: center;
+                    color: @primary-color-100;
+                    font-size: @title-font-size !important;
+                  }
+                  .MuiTypography-h4{
+                    text-align: center;
+                    color: @secondary-color-200;
+                    font-size: @small-font-size !important;
+                  }
+                  .MuiTypography-body2{
+                    color: @secondary-color-100 !important;
+                    padding: 20px;
+                  }
+                }
+            }
+            
+        }

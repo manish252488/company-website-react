@@ -1,0 +1,64 @@
+@import '../../Base.less';
+
+.contact-card {
+    .content-card{
+        .custom-card-content{
+            .MuiPaper-root{
+                .MuiPaper-root{
+                    .google-map{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+.contact-form{
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    .MuiFormControl-root ,.MuiButtonBase-root{
+        margin-top: 10px;
+    }
+}
+.detail-card{
+    .MuiCardContent-root{
+        height: 90%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}
+@media @phone {
+    .contact-card {
+    .content-card{
+        width: 100%;
+        .custom-card-content{
+            .MuiPaper-root{
+                flex-direction: column;
+                .MuiPaper-root{
+                     .google-map{
+                        width: 100%;
+                        height: calc(100vh - 30vh);
+                    }
+                }
+            }
+        }
+    }
+}
+.detail-card{
+    .MuiCardContent-root{
+        height: 90%;
+        overflow-y: auto;
+        display: block;
+    }
+}
+.contact-form{
+    width: 100%;
+    padding: 0;
+    .MuiFormControl-root ,.MuiButtonBase-root{
+        margin-top: 10px;
+    }
+}
+}
