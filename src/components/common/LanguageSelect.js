@@ -6,7 +6,6 @@ import Paper from "@material-ui/core/Paper";
 import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
-import { makeStyles } from "@material-ui/core/styles";
 import { ExpandMore, TranslateOutlined } from "@material-ui/icons";
 import { useTranslation } from "react-i18next";
 const lang = [
@@ -21,7 +20,6 @@ const lang = [
 ];
 
 export default function LanguageSelect() {
-  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const { i18n } = useTranslation();
