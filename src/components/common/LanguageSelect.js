@@ -19,15 +19,6 @@ const lang = [
     name: "German",
   },
 ];
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  paper: {
-    marginRight: theme.spacing(2),
-    zIndex: 9999,
-  },
-}));
 
 export default function LanguageSelect() {
   const classes = useStyles();
@@ -67,13 +58,13 @@ export default function LanguageSelect() {
     handleClose(ev);
   };
   return (
-    <div className={classes.root}>
+    <div className="language-selector">
       <Button
         ref={anchorRef}
         aria-controls={open ? "menu-list-grow" : undefined}
         aria-haspopup="true"
         onClick={handleToggle}
-        color="inherit"
+        color="#fff"
         startIcon={<TranslateOutlined color="#fff" />}
         endIcon={<ExpandMore color="#fff" />}
       >
@@ -94,7 +85,7 @@ export default function LanguageSelect() {
                 placement === "bottom" ? "center top" : "center bottom",
             }}
           >
-            <Paper className={classes.paper}>
+            <Paper className={classes.}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList
                   autoFocusItem={open}
