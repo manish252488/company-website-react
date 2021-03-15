@@ -14,30 +14,10 @@ import {
   SettingsOutlined,
 } from "@material-ui/icons";
 import History from "../../@history";
-import { IconButton, ListItemIcon, ListItemText } from "@material-ui/core";
+import { Button, ListItemIcon, ListItemText } from "@material-ui/core";
 import "./index.less";
-const lang = [
-  {
-    icon: <HomeOutlined />,
-    name: "Home",
-    path: "/",
-  },
-  {
-    icon: <LocalMallOutlined />,
-    name: "Products",
-    path: "/products",
-  },
-  {
-    icon: <SettingsOutlined />,
-    name: "Services",
-    path: "/services",
-  },
-  {
-    icon: <PermContactCalendarOutlined />,
-    name: "Contact",
-    path: "/contacts",
-  },
-];
+import { useTranslation } from "react-i18next";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -55,7 +35,29 @@ export default function MoreOptions() {
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
-
+  const { t } = useTranslation();
+  const lang = [
+    {
+      icon: <HomeOutlined />,
+      name: t("home"),
+      path: "/",
+    },
+    {
+      icon: <LocalMallOutlined />,
+      name: t("products"),
+      path: "/products",
+    },
+    {
+      icon: <SettingsOutlined />,
+      name: t("services"),
+      path: "/services",
+    },
+    {
+      icon: <PermContactCalendarOutlined />,
+      name: t("contacts"),
+      path: "/contacts",
+    },
+  ];
   const handleClose = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
@@ -86,15 +88,16 @@ export default function MoreOptions() {
   };
   return (
     <div className={classes.root + " more-options"}>
-      <IconButton
+      <Button
         ref={anchorRef}
         aria-controls={open ? "menu-list-grow" : undefined}
         aria-haspopup="true"
         onClick={handleToggle}
         color="inherit"
+        endIcon={<ExpandMoreOutlined />}
       >
-        <ExpandMoreOutlined />
-      </IconButton>
+        {t("more")}
+      </Button>
       <Popper
         open={open}
         anchorEl={anchorRef.current}

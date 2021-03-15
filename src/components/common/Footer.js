@@ -67,7 +67,7 @@ const Footer = (props) => {
               <ListItemIcon>
                 <PhoneAndroidOutlined />
               </ListItemIcon>
-              <ListItemText primary="+97 7004703084" />
+              <ListItemText primary="+91 7004703084" />
             </ListItem>
             <ListItem key={2}>
               <ListItemIcon>

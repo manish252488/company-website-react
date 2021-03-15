@@ -20,5 +20,11 @@
   "fText": "fires....",
   "fText2": "Dd",
   "ourProdDesc": "od",
-  "feelFree": "feel free"
+  "feelFree": "feel free",
+  "contactUs": "Contact us",
+  "fullName": "Full Name",
+  "email": "Email",
+  "phoneNo": "PhoneNo",
+  "writeQuery": "Write down your query here!",
+  "sendMessage": "Send Message"
 }

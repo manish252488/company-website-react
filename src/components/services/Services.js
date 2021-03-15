@@ -15,8 +15,8 @@ const Services = (props) => {
           </Typography>,
           <Typography variant="body2" align="center" color="textPrimary">
             <Typography color="error">
-              Note: Please, Enquire in the contact panel for any queries
-              regarding project maintenance!
+              Please, Enquire in the contact panel for any queries regarding
+              project maintenance!
             </Typography>
           </Typography>,
         ]}
