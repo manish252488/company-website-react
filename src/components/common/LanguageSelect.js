@@ -85,7 +85,7 @@ export default function LanguageSelect() {
                 placement === "bottom" ? "center top" : "center bottom",
             }}
           >
-            <Paper className={classes.}>
+            <Paper elevation={5}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList
                   autoFocusItem={open}
