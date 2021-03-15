@@ -23,14 +23,14 @@ const lang = [
     path: "/",
   },
   {
-    icon: <SettingsOutlined />,
-    name: "Services",
-    path: "/services",
-  },
-  {
     icon: <LocalMallOutlined />,
     name: "Products",
     path: "/products",
+  },
+  {
+    icon: <SettingsOutlined />,
+    name: "Services",
+    path: "/services",
   },
   {
     icon: <PermContactCalendarOutlined />,
@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     marginRight: theme.spacing(2),
+    minWidth: 40,
   },
 }));
 
