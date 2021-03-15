@@ -20,7 +20,7 @@ const NotFound = () => {
             style={{ marginLeft: "37%", width: "26%" }}
             color="primary"
             variant="contained"
-            startIcon={<RedoOutlined color="#fff" />}
+            startIcon={<RedoOutlined />}
             onClick={() => History.push("/")}
           >
             back to home

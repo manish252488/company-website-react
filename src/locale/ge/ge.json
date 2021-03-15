@@ -1,3 +1,22 @@
 {
-  "home": "Zuhause"
+  "home": "Zuhause",
+  "name": "TechDEV",
+  "whatDev": "Was entwickeln wir?",
+  "android": "Android",
+  "ios": "IOS",
+  "web": "Webseite",
+  "why": "Warum?",
+  "whyText": "Dies ist nur ein Beispieltext!",
+  "services": "Dienstleistungen",
+  "products": "Products",
+  "contacts": "Produkte",
+  "log-sign": "Anmeldung/Registrieren",
+  "prev": "Bisherige",
+  "next": "Nächster",
+  "more": "Mehr",
+  "aboutUs": "Über Uns",
+  "development": "Entwicklung",
+  "fText": "fires....",
+  "fText2": "Dd",
+  "ourProdDesc": "od"
 }

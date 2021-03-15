@@ -25,24 +25,22 @@ const Contact = (props) => {
           </CardContent>
         </Card>
       </Fade>
-      <Fade bottom>
-        <CustomCard
-          className="content-card"
-          header={null}
-          cardContent={[
-            <Paper elevation={3}>
-              <Paper elevation={4}>
-                <GoogleMap />
-              </Paper>
-              <Card className="content-card-content">
-                <CardContent>
-                  <ContactForm />
-                </CardContent>
-              </Card>
-            </Paper>,
-          ]}
-        />
-      </Fade>
+      <CustomCard
+        className="content-card"
+        header={null}
+        cardContent={[
+          <Paper elevation={3}>
+            <Paper elevation={4}>
+              <GoogleMap />
+            </Paper>
+            <Card className="content-card-content">
+              <CardContent>
+                <ContactForm />
+              </CardContent>
+            </Card>
+          </Paper>,
+        ]}
+      />
     </div>
   );
 };

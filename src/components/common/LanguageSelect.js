@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
@@ -8,6 +8,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { ExpandMore, TranslateOutlined } from "@material-ui/icons";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { changeLang } from "../../store/actions";
 const lang = [
   {
     key: "en",
@@ -23,6 +25,13 @@ export default function LanguageSelect() {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const { i18n } = useTranslation();
+  const dispatch = useDispatch();
+  const language = useSelector(({ language }) => language.selected);
+  useEffect(() => {
+    if (language && language !== "" && language?.length > 0) {
+      i18n.changeLanguage(language);
+    }
+  }, [i18n, language]);
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -52,7 +61,7 @@ export default function LanguageSelect() {
     prevOpen.current = open;
   }, [open]);
   const selectLanguage = (la, ev) => {
-    i18n.changeLanguage(la);
+    dispatch(changeLang(la));
     handleClose(ev);
   };
   return (
@@ -62,9 +71,8 @@ export default function LanguageSelect() {
         aria-controls={open ? "menu-list-grow" : undefined}
         aria-haspopup="true"
         onClick={handleToggle}
-        color="#fff"
-        startIcon={<TranslateOutlined color="#fff" />}
-        endIcon={<ExpandMore color="#fff" />}
+        startIcon={<TranslateOutlined />}
+        endIcon={<ExpandMore />}
       >
         {i18n.language}
       </Button>
@@ -85,13 +93,10 @@ export default function LanguageSelect() {
           >
             <Paper elevation={5}>
               <ClickAwayListener onClickAway={handleClose}>
-                <MenuList
-                  autoFocusItem={open}
-                  id="menu-list-grow"
-                  onKeyDown={handleListKeyDown}
-                >
+                <MenuList autoFocusItem={open} onKeyDown={handleListKeyDown}>
                   {lang.map((val, index) => (
                     <MenuItem
+                      key={index}
                       onClick={(event) => selectLanguage(val.key, event)}
                     >
                       {val.name}

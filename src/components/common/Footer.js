@@ -16,53 +16,52 @@ import {
   Typography,
 } from "@material-ui/core";
 import LanguageSelect from "../common/LanguageSelect";
+import { useTranslation } from "react-i18next";
 const Footer = (props) => {
+  const { t } = useTranslation();
   return (
     <div className="footer">
       <div className="content">
         <div className="col col1">
           <Typography variant="h3" className="title-light">
-            We here ..........
+            {t("fText")}
           </Typography>
           <List>
             <ListItem>
-              <ListItemText className="font-sm">
-                What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry.
-              </ListItemText>
+              <ListItemText className="font-sm">{t("fText2")}</ListItemText>
             </ListItem>
           </List>
           <LanguageSelect />
         </div>
         <div className="col col2">
           <Typography variant="h3" className="title-light">
-            Products:
+            {t("products")}:
           </Typography>
           <List>
             <ListItem key={2}>
               <ListItemIcon>
                 <ComputerOutlined />
               </ListItemIcon>
-              <ListItemText primary="Web Development" />
+              <ListItemText primary={`Web ${t("development")}`} />
             </ListItem>
             <ListItem key={3}>
               <ListItemIcon>
                 <PhoneAndroidOutlined />
               </ListItemIcon>
-              <ListItemText primary="Android Development" />
+              <ListItemText primary={`Android ${t("development")}`} />
             </ListItem>
             <ListItem key={1}>
               <ListItemIcon>
                 <PhoneIphoneOutlined />
               </ListItemIcon>
-              <ListItemText primary="IOS Development" />
+              <ListItemText primary={`IOS ${t("development")}`} />
             </ListItem>
           </List>
         </div>
         <div className="col col3">
           <List component="nav" aria-label="main mailbox folders">
             <Typography variant="h3" className="title-light">
-              Contact:
+              {t("contacts")}:
             </Typography>
             <ListItem key={1}>
               <ListItemIcon>

@@ -29,6 +29,7 @@ const Home = (props) => {
     <div>
       {tab === 1 && (
         <ImageTab
+          key={1}
           image="https://www.coreldraw.com/static/cdgs/images/pages/seo/tips/photo/basics/blur-background/blur-background-og.jpg"
           text="this is some text description for this and some of the
                     carousel"
@@ -36,6 +37,7 @@ const Home = (props) => {
       )}
       {tab === 2 && (
         <ImageTab
+          key={2}
           image="https://www.coreldraw.com/static/cdgs/images/pages/seo/tips/photo/basics/blur-background/blur-background-og.jpg"
           text="this is some text description for this and some of the
                     carousel"
@@ -43,6 +45,7 @@ const Home = (props) => {
       )}
       {tab === 3 && (
         <ImageTab
+          key={3}
           image="https://www.coreldraw.com/static/cdgs/images/pages/seo/tips/photo/basics/blur-background/blur-background-og.jpg"
           text="this is some text description for this and some of the
                     carousel"
@@ -52,16 +55,14 @@ const Home = (props) => {
   );
   return (
     <React.Fragment>
-      <Fade bottom>
-        <CustomCarousel autoPlay={true} width="100%" />
-      </Fade>
+      <CustomCarousel autoPlay={true} width="100%" />
       <Grid className="custom-grid" container>
         <Grid item xs>
           <Fade bottom>
             <CustomCard
               title={t("whatDev")}
               cardButtons={[
-                <ButtonGroup>
+                <ButtonGroup key={1}>
                   <Button
                     className={tab === 1 ? "selected" : ""}
                     onClick={() => setTab(1)}
@@ -100,7 +101,7 @@ const Home = (props) => {
           className="content-card"
           header={null}
           cardContent={[
-            <Paper elevation={3}>
+            <Paper key={1} elevation={3}>
               <CustomCarousel width="50%" />
               <Card className="content-card-content">
                 <CardContent>
@@ -108,27 +109,26 @@ const Home = (props) => {
                   <Typography variant="body2">{t("ourProdDesc")}</Typography>
                 </CardContent>
                 <CardActions>
-                  <Button endIcon={<FastForward />}>More</Button>
+                  <Button endIcon={<FastForward />}>{t("more")}</Button>
                 </CardActions>
               </Card>
             </Paper>,
           ]}
         />
       </Fade>
-      <Fade bottom>
-        <CustomCarousel
-          className="about-carousel"
-          width="100%"
-          autoPlay={false}
-          components={[
-            <CustomCard
-              title={t("aboutUs")}
-              cardContent={[<Paper elevation={5}></Paper>]}
-            />,
-            <CustomCard header={null} />,
-          ]}
-        />
-      </Fade>
+      <CustomCarousel
+        className="about-carousel"
+        width="100%"
+        autoPlay={false}
+        components={[
+          <CustomCard
+            key={1}
+            title={t("aboutUs")}
+            cardContent={[<Paper elevation={5}></Paper>]}
+          />,
+          <CustomCard key={2} header={null} />,
+        ]}
+      />
     </React.Fragment>
   );
 };

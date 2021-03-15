@@ -1,9 +1,24 @@
 {
+  "name": "TechDEV",
   "home": "Home",
-  "whatDev": "What we develop?",
+  "whatDev": "What do we develop?",
   "android": "Android",
   "ios": "IOS",
   "web": "Website",
   "why": "Why?",
-  "whyText": "this just a sample text!"
+  "whyText": "this just a sample text!",
+  "services": "Services",
+  "products": "Products",
+  "contacts": "Contacts",
+  "log-sign": "Login/Register",
+  "prev": "Prev",
+  "next": "next",
+  "more": "More",
+  "aboutUs": "About Us",
+  "ourProd": "Our Products >>",
+  "development": "Development",
+  "fText": "fires....",
+  "fText2": "Dd",
+  "ourProdDesc": "od",
+  "feelFree": "feel free"
 }

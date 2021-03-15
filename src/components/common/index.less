@@ -20,6 +20,18 @@
             padding: 2px;
             margin-left: 2px;
           }
+          div{
+            .MuiPaper-root{
+              min-width: 150px;
+              .MuiList-root{
+                .MuiButtonBase-root{
+                  .MuiListItemIcon-root{
+                    min-width: auto !important;
+                  }
+                }
+              }
+            }
+          }
         }
       }
       .login-button{
@@ -92,9 +104,6 @@
         .MuiListItemIcon-root {
           margin-right: 5px;
         }
-        .MuiListItem-gutters {
-          padding-left: unset !important;
-        }
         .MuiSvgIcon-root {
           color: @primary-color-800 !important;
         }
@@ -106,9 +115,19 @@
              .MuiButton-label {
               color: @white;
             }
-            div {
-            z-index: 9998 !important;
+            
           }
+          div {
+            z-index: 9998 !important;
+            min-width: 15vw;
+            .MuiList-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+    .MuiButtonBase-root{
+      font-size: @small-font-size;
+      font-weight: @fontWeight;
+    }
+}
           }
         }
       }

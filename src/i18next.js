@@ -13,10 +13,10 @@ i18n.use(initReactI18next).init({
       translations: ge,
     },
   },
+  debug: true,
   whitelist: ["en", "ge"],
   fallbackLng: "en",
   // debug only when not in production
-  debug: false,
   lng: "en",
   ns: ["translations"],
   defaultNS: "translations",

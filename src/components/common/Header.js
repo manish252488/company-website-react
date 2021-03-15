@@ -1,13 +1,11 @@
 import {
   AppBar,
   Button,
-  IconButton,
   makeStyles,
-  Toolbar,
   Typography,
+  Toolbar,
 } from "@material-ui/core";
 import {
-  Facebook,
   HomeOutlined,
   LocalMallOutlined,
   PermContactCalendarOutlined,
@@ -15,27 +13,23 @@ import {
   SettingsOutlined,
 } from "@material-ui/icons";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import History from "../../@history";
+import { Logo } from "../../assets";
 import { showAuthPage } from "../../store/actions";
 import MoreOptions from "./MoreOptions";
 const Header = (props) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const login = () => dispatch(showAuthPage());
+  const { t } = useTranslation();
   return (
     <AppBar position="static">
       <Toolbar>
-        <IconButton
-          edge="start"
-          className={classes.menuButton}
-          color="inherit"
-          aria-label="menu"
-        >
-          <Facebook />
-        </IconButton>
+        <Logo className={classes.menuButton} />
         <Typography variant="h6" className={classes.title}>
-          Some Name
+          {t("name")}
         </Typography>
         <div className="web-view">
           <Button
@@ -44,7 +38,7 @@ const Header = (props) => {
             color="inherit"
             variant="text"
           >
-            Home
+            {t("home")}
           </Button>
           <Button
             onClick={() => History.push("/products")}
@@ -52,7 +46,7 @@ const Header = (props) => {
             color="inherit"
             variant="text"
           >
-            Products
+            {t("products")}
           </Button>
           <Button
             onClick={() => History.push("/services")}
@@ -60,7 +54,7 @@ const Header = (props) => {
             color="inherit"
             variant="text"
           >
-            Services
+            {t("services")}
           </Button>
           <Button
             onClick={() => History.push("/contacts")}
@@ -68,7 +62,7 @@ const Header = (props) => {
             color="inherit"
             variant="text"
           >
-            Contacts
+            {t("contacts")}
           </Button>
         </div>
         <Button
@@ -78,7 +72,7 @@ const Header = (props) => {
           color="inherit"
           variant="text"
         >
-          Login/Register
+          {t("log-sign")}
         </Button>
         <div className="mobile-view">
           <MoreOptions />
@@ -93,6 +87,9 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    width: 60,
+    height: 60,
+    cursor: "pointer",
   },
   title: {
     flexGrow: 1,

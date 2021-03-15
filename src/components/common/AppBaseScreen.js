@@ -2,7 +2,6 @@ import React from "react";
 import "./index.less";
 import Footer from "./Footer";
 import Authpage from "../auth";
-import Fade from "react-reveal";
 import Header from "./Header";
 import Bubbles from "./Particles/Bubbles";
 const AppBaseScreen = (props) => {
@@ -29,9 +28,7 @@ const AppBaseScreen = (props) => {
       <Authpage />
       <Header />
       <div style={{ minHeight: "40vh" }}>{props.children}</div>
-      <Fade bottom>
-        <Footer />
-      </Fade>
+      <Footer />
     </div>
   );
 };
