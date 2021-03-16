@@ -35,7 +35,7 @@ const Footer = (props) => {
         </div>
         <div className="col col2">
           <Typography variant="h3" className="title-light">
-            {t("products")}:
+            {t("services")}:
           </Typography>
           <List>
             <ListItem key={2}>

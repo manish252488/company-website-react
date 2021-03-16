@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from "react";
 import "./index.less";
 import { useTranslation } from "react-i18next";
 import CustomCard from "../common/CustomCard";
@@ -12,9 +13,11 @@ import {
   Paper,
   Typography,
 } from "@material-ui/core";
-import Fade from "react-reveal";
+import { Fade, Flip } from "react-reveal";
 import CustomCarousel from "../common/CustomCarousel";
 import { FastForward } from "@material-ui/icons";
+import { apple, android, website, mock, workflow, dribble } from "../../assets";
+import VideoPlayer from "../common/VideoPlayer";
 const Home = (props) => {
   const { t } = useTranslation();
   const [tab, setTab] = useState(1);
@@ -25,37 +28,51 @@ const Home = (props) => {
       </div>
     );
   };
+  useEffect(() => {
+    let val = tab;
+    const interval = setInterval(() => {
+      if (tab < 3) setTab(val + 1);
+      else setTab(1);
+    }, 5000);
+    return () => clearInterval(interval);
+  });
   const renderCardContent = () => (
     <div>
       {tab === 1 && (
-        <ImageTab
-          key={1}
-          image="https://www.coreldraw.com/static/cdgs/images/pages/seo/tips/photo/basics/blur-background/blur-background-og.jpg"
-          text="this is some text description for this and some of the
+        <Flip right>
+          <ImageTab
+            key={1}
+            image={website}
+            text="this is some text description for this and some of the
                     carousel"
-        />
+          />
+        </Flip>
       )}
       {tab === 2 && (
-        <ImageTab
-          key={2}
-          image="https://www.coreldraw.com/static/cdgs/images/pages/seo/tips/photo/basics/blur-background/blur-background-og.jpg"
-          text="this is some text description for this and some of the
+        <Flip right>
+          <ImageTab
+            key={2}
+            image={android}
+            text="this is some text description for this and some of the
                     carousel"
-        />
+          />
+        </Flip>
       )}
       {tab === 3 && (
-        <ImageTab
-          key={3}
-          image="https://www.coreldraw.com/static/cdgs/images/pages/seo/tips/photo/basics/blur-background/blur-background-og.jpg"
-          text="this is some text description for this and some of the
+        <Flip right>
+          <ImageTab
+            key={3}
+            image={apple}
+            text="this is some text description for this and some of the
                     carousel"
-        />
+          />
+        </Flip>
       )}
     </div>
   );
   return (
     <React.Fragment>
-      <CustomCarousel autoPlay={true} width="100%" />
+      <CustomCarousel className="vid-cor" width="100%" />
       <Grid className="custom-grid" container>
         <Grid item xs>
           <Fade bottom>
@@ -124,7 +141,11 @@ const Home = (props) => {
           <CustomCard
             key={1}
             title={t("aboutUs")}
-            cardContent={[<Paper elevation={5}></Paper>]}
+            cardContent={[
+              <Paper key={1} elevation={5}>
+                <VideoPlayer video={mock} />
+              </Paper>,
+            ]}
           />,
           <CustomCard key={2} header={null} />,
         ]}

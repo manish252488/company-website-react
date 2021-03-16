@@ -1,6 +1,6 @@
 @import "../../Base.less";
 .content-card {
-  height: auto !important;
+  height: 100% !important;
   .MuiPaper-root {
     width: 100%;
     display: flex;
@@ -25,14 +25,16 @@
 }
 .image-tab{
   width: 100%;
-  background-size: cover;
-  min-height: 40vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 28vw;
+  border-radius: 5px;
   div{
     color:#fff;
-    background-color: #1111;
+    background-color: rgba(17, 17, 17, 0.616);
     padding: 5px;
     position: relative;
-    top: 12vw;
+    top: 20vw;
     font-size: @body-font-size;
   }
 }
@@ -68,8 +70,7 @@
             height: 50%;
             .MuiPaper-root{
               background-color: @primary-color-700;
-              width: 50%;
-              min-height: 25%;
+              overflow: hidden;
             }
           }
         }
@@ -92,11 +93,9 @@
     }
   }
 .image-tab{
-  width: 100%;
-  background-size: cover;
-  min-height: 35vh;
+  min-height: 50vw;
   div{
-    top: 20vw;
+    top: 30vw;
   }
 }
   .content-card {
@@ -125,7 +124,6 @@
             .MuiPaper-root{
               background-color: @primary-color-700;
               width: 100%;
-              min-height: 100%;
               margin-top: 10px;
             }
           }

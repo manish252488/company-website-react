@@ -1,6 +1,13 @@
 import Carousel from "nuka-carousel";
 import React from "react";
 import PropTypes from "prop-types";
+import {
+  carousel1,
+  carousel2,
+  carousel3,
+  carousel4,
+  carousel5,
+} from "../../assets";
 import "./carousel.less";
 const CustomCarousel = (props) => {
   const { autoPlay, images, width, className } = props;
@@ -29,11 +36,7 @@ CustomCarousel.propTypes = {
 CustomCarousel.defaultProps = {
   autoPlay: true,
   components: [],
-  images: [
-    "https://p4.wallpaperbetter.com/wallpaper/145/266/383/paris-carousel-eiffel-tower-wallpaper-preview.jpg",
-    "https://live.staticflickr.com/7678/17260399585_b32a535158_b.jpg",
-    "https://media.gettyimages.com/photos/low-angle-view-of-merrygoround-and-eiffel-tower-at-sunset-picture-id1140679987?s=612x612",
-  ],
+  images: [carousel3, carousel1, carousel2, carousel5],
   width: "100%",
 };
 export default CustomCarousel;

@@ -9,7 +9,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   ExpandMoreOutlined,
   HomeOutlined,
-  LocalMallOutlined,
   PermContactCalendarOutlined,
   SettingsOutlined,
 } from "@material-ui/icons";
@@ -41,11 +40,6 @@ export default function MoreOptions() {
       icon: <HomeOutlined />,
       name: t("home"),
       path: "/",
-    },
-    {
-      icon: <LocalMallOutlined />,
-      name: t("products"),
-      path: "/products",
     },
     {
       icon: <SettingsOutlined />,

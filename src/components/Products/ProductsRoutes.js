@@ -4,7 +4,7 @@ const ProductsRoutes = {
   auth: authRoles.guest,
   routes: [
     {
-      path: "/products",
+      path: "/services",
       component: Products,
       exact: true,
     },

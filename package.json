@@ -63,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "emailjs-com": "^2.6.4",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "react-app-rewire-svg-react-loader": "codebandits/react-app-rewire-svg-react-loader",

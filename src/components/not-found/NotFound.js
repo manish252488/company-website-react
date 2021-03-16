@@ -11,13 +11,13 @@ const NotFound = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Grid style={{ height: "42vh" }} container>
+      <Grid style={{ paddingTop: 80 }} container>
         <Grid item xs>
-          <Typography variant={"h3"} align="center">
+          <Typography variant={"h3"} color="secondary" align="center">
             Not Found!
           </Typography>
           <Button
-            style={{ marginLeft: "37%", width: "26%" }}
+            style={{ marginLeft: "38%", minWidth: "23%" }}
             color="primary"
             variant="contained"
             startIcon={<RedoOutlined />}

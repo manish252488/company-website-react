@@ -7,7 +7,6 @@ import {
 } from "@material-ui/core";
 import {
   HomeOutlined,
-  LocalMallOutlined,
   PermContactCalendarOutlined,
   Person,
   SettingsOutlined,
@@ -39,14 +38,6 @@ const Header = (props) => {
             variant="text"
           >
             {t("home")}
-          </Button>
-          <Button
-            onClick={() => History.push("/products")}
-            startIcon={<LocalMallOutlined />}
-            color="inherit"
-            variant="text"
-          >
-            {t("products")}
           </Button>
           <Button
             onClick={() => History.push("/services")}
