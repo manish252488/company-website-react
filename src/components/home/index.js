@@ -16,7 +16,7 @@ import {
 import { Fade, Flip } from "react-reveal";
 import CustomCarousel from "../common/CustomCarousel";
 import { FastForward } from "@material-ui/icons";
-import { apple, android, website, mock, workflow, dribble } from "../../assets";
+import { apple, android, website, mock } from "../../assets";
 import VideoPlayer from "../common/VideoPlayer";
 const Home = (props) => {
   const { t } = useTranslation();

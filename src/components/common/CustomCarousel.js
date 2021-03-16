@@ -1,13 +1,7 @@
 import Carousel from "nuka-carousel";
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  carousel1,
-  carousel2,
-  carousel3,
-  carousel4,
-  carousel5,
-} from "../../assets";
+import { carousel1, carousel2, carousel3, carousel5 } from "../../assets";
 import "./carousel.less";
 const CustomCarousel = (props) => {
   const { autoPlay, images, width, className } = props;
