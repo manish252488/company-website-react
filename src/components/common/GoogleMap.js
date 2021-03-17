@@ -27,11 +27,11 @@ GoogleMap.propTypes = {
   key: PropTypes.string,
 };
 GoogleMap.defaultProps = {
-  lat: 59.955413,
-  long: 30.337844,
+  lat: 25.612677,
+  long: 85.158875,
   center: {
-    lat: 59.95,
-    lng: 30.33,
+    lat: 25.612677,
+    lng: 85.158875,
   },
   zoom: 11,
   key: "AIzaSyCKlfXwDKL_i5tgaXZldNkYC0hp8V1DV8g",

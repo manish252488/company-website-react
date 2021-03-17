@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import Fade from "react-reveal";
 import CustomCard from "../common/CustomCard";
 import CustomCarousel from "../common/CustomCarousel";
+import services from "./services.json";
 const Products = (props) => {
   const { t } = useTranslation();
   return (
@@ -40,18 +41,17 @@ const Products = (props) => {
       </Fade>
       <Fade bottom>
         <Grid container spacing={4} xs>
-          <Grid item xs>
-            <ProfileCard name={t("web")} />
-          </Grid>
-          <Grid item xs>
-            <ProfileCard name={t("mobileDev")} />
-          </Grid>
-          <Grid item xs>
-            <ProfileCard name={t("softDev")} />
-          </Grid>
-          <Grid item xs>
-            <ProfileCard name={"rts"} />
-          </Grid>
+          {services?.map((val, index) => (
+            <Grid item xs>
+              <ProfileCard
+                key={index}
+                image={val.picture}
+                name={val.service}
+                skills={val.technologies}
+                about={val.description}
+              />
+            </Grid>
+          ))}
         </Grid>
       </Fade>
     </Container>

@@ -1,6 +1,7 @@
 import {
   ComputerOutlined,
   Facebook,
+  Instagram,
   LocationOnOutlined,
   MailOutlined,
   PhoneAndroidOutlined,
@@ -17,6 +18,7 @@ import {
 } from "@material-ui/core";
 import LanguageSelect from "../common/LanguageSelect";
 import { useTranslation } from "react-i18next";
+import CustomTooltip from "./CustomTooltip";
 const Footer = (props) => {
   const { t } = useTranslation();
   return (
@@ -63,36 +65,37 @@ const Footer = (props) => {
             <Typography variant="h3" className="title-light">
               {t("contacts")}:
             </Typography>
-            <ListItem key={1}>
+            {/*  <ListItem key={1}>
               <ListItemIcon>
                 <PhoneAndroidOutlined />
               </ListItemIcon>
-              <ListItemText primary="+91 7004703084" />
-            </ListItem>
+              <ListItemText primary="+91 " />
+            </ListItem> */}
             <ListItem key={2}>
               <ListItemIcon>
                 <MailOutlined />
               </ListItemIcon>
-              <ListItemText primary="manish25.manish2488@gmail.com" />
+              <ListItemText primary="techdev588@gmail.com" />
             </ListItem>
             <ListItem key={3}>
               <ListItemIcon>
                 <LocationOnOutlined />
               </ListItemIcon>
-              <ListItemText primary="manish25.manish2488@gmail.com" />
+              <ListItemText primary="Patna,801505,Bihar" />
             </ListItem>
           </List>
         </div>
       </div>
       <div className="social-icons">
         <div>
-          <Facebook />
+          <CustomTooltip title="Follow us on Instagram!">
+            <Instagram />
+          </CustomTooltip>
         </div>
         <div>
-          <Facebook />
-        </div>
-        <div>
-          <Facebook />
+          <CustomTooltip title="Follow us on Facebook!">
+            <Facebook />
+          </CustomTooltip>
         </div>
       </div>
     </div>
