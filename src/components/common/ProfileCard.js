@@ -4,7 +4,7 @@ import Bubbles from "./Particles/Bubbles";
 import "./index.less";
 import PropTypes from "prop-types";
 const ProfileCard = (props) => {
-  const { content, image, name, skills, about } = props;
+  const { content, image, name, skills, about, role, contact } = props;
   return (
     <Paper className="profile-card" elevation={3}>
       <div className="cover">
@@ -37,7 +37,9 @@ const ProfileCard = (props) => {
           <div className="content">
             <Typography variant="h3">{name}</Typography>
             <Typography variant="h4">{skills}</Typography>
+            <Typography variant="h4">{role}</Typography>
             <Typography variant="body2">{about}</Typography>
+            <Typography variant="body2">{contact}</Typography>
           </div>
         )}
       </div>
@@ -50,11 +52,15 @@ ProfileCard.propTypes = {
   name: PropTypes.string,
   skills: PropTypes.string,
   about: PropTypes.string,
+  role: PropTypes.string,
+  contact: PropTypes.string,
 };
 ProfileCard.defaultProps = {
   image: "https://franchisematch.com/wp-content/uploads/2015/02/john-doe.jpg",
   content: [],
   name: "John Doe",
+  role: "",
+  contact: "",
   skills: "React, Vue, Node.js etc",
   about:
     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a.",

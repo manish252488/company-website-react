@@ -8,20 +8,19 @@ import {
 import {
   HomeOutlined,
   PermContactCalendarOutlined,
-  Person,
   SettingsOutlined,
 } from "@material-ui/icons";
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next"; /* 
+import { useDispatch } from "react-redux"; */
 import History from "../../@history";
-import { Logo } from "../../assets";
-import { showAuthPage } from "../../store/actions";
+import { Logo } from "../../assets"; /* 
+import { showAuthPage } from "../../store/actions"; */
 import MoreOptions from "./MoreOptions";
 const Header = (props) => {
   const classes = useStyles();
-  const dispatch = useDispatch();
-  const login = () => dispatch(showAuthPage());
+  /* const dispatch = useDispatch();
+  const login = () => dispatch(showAuthPage());  */
   const { t } = useTranslation();
   return (
     <AppBar position="static">
@@ -56,7 +55,7 @@ const Header = (props) => {
             {t("contacts")}
           </Button>
         </div>
-        <Button
+        {/*   <Button
           className="login-button"
           onClick={login}
           startIcon={<Person />}
@@ -64,7 +63,7 @@ const Header = (props) => {
           variant="text"
         >
           {t("log-sign")}
-        </Button>
+        </Button> */}
         <div className="mobile-view">
           <MoreOptions />
         </div>

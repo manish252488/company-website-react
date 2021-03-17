@@ -6,16 +6,28 @@ import CustomCard from "../common/CustomCard";
 import GoogleMap from "../common/GoogleMap";
 import ProfileCard from "../common/ProfileCard";
 import ContactForm from "./ContactForm";
+import jsonData from "./card-data.json";
 import "./index.less";
 const Contact = (props) => {
   const { t } = useTranslation();
+  const renderCardData = () => {
+    return jsonData.map((profile, index) => (
+      <ProfileCard
+        key={index}
+        name={profile.name}
+        skills={profile.skills}
+        image={profile.picture}
+        about={profile.about}
+      />
+    ));
+  };
   return (
     <div className="contact-card">
       <Fade bottom>
         <CustomCard
           className="detail-card"
           header={null}
-          cardContent={[<ProfileCard />, <ProfileCard />, <ProfileCard />]}
+          cardContent={renderCardData()}
         />
       </Fade>
       <Fade bottom>

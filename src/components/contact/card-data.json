@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Akash Kumar Tiwari",
+    "picture": "https://franchisematch.com/wp-content/uploads/2015/02/john-doe.jpg",
+    "skills": "Java, React JS, Node Js",
+    "about": "some about section!",
+    "role": "some role",
+    "email": ""
+  },
+  {
+    "name": "Kaushal Kumar",
+    "picture": "https://franchisematch.com/wp-content/uploads/2015/02/john-doe.jpg",
+    "skills": "Java, PHP",
+    "about": "some about section!",
+    "role": "some role",
+    "email": ""
+  },
+  {
+    "name": "Rohan Pramanik",
+    "picture": "https://franchisematch.com/wp-content/uploads/2015/02/john-doe.jpg",
+    "skills": "Java, React JS, Node Js",
+    "about": "some about section!",
+    "role": "some role",
+    "email": ""
+  }
+]
