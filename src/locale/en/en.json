@@ -15,16 +15,17 @@
   "next": "next",
   "more": "More",
   "aboutUs": "About Us",
-  "ourProd": "Our Products >>",
+  "ourProd": "Our Services >>",
   "development": "Development",
   "fText": "fires....",
   "fText2": "Dd",
   "ourProdDesc": "od",
-  "feelFree": "feel free",
+  "feelFree": "Feel free to put on your thought or queries down. we are always listening to You! 😊",
   "contactUs": "Contact us",
   "fullName": "Full Name",
   "email": "Email",
   "phoneNo": "PhoneNo",
   "writeQuery": "Write down your query here!",
-  "sendMessage": "Send Message"
+  "sendMessage": "Send Message",
+  "ourServices": ""
 }
