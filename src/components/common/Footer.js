@@ -81,7 +81,7 @@ const Footer = (props) => {
               <ListItemIcon>
                 <LocationOnOutlined />
               </ListItemIcon>
-              <ListItemText primary="Patna,801505,Bihar" />
+              <ListItemText primary="Patna-801505,Bihar" />
             </ListItem>
           </List>
         </div>
