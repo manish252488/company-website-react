@@ -5,27 +5,27 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  .MuiAppBar-root{
-    .MuiToolbar-root{
-      .web-view{
-        .MuiButtonBase-root{
-          .MuiButton-label{
+  .MuiAppBar-root {
+    .MuiToolbar-root {
+      .web-view {
+        .MuiButtonBase-root {
+          .MuiButton-label {
             font-size: 12px;
           }
         }
       }
-      .mobile-view{
-        .more-options{
-          .MuiButtonBase-root{
+      .mobile-view {
+        .more-options {
+          .MuiButtonBase-root {
             padding: 2px;
             margin-left: 2px;
           }
-          div{
-            .MuiPaper-root{
+          div {
+            .MuiPaper-root {
               min-width: 150px;
-              .MuiList-root{
-                .MuiButtonBase-root{
-                  .MuiListItemIcon-root{
+              .MuiList-root {
+                .MuiButtonBase-root {
+                  .MuiListItemIcon-root {
                     min-width: auto !important;
                   }
                 }
@@ -34,12 +34,12 @@
           }
         }
       }
-      .login-button{
+      .login-button {
         background-color: @secondary-color-100;
         min-width: auto !important;
-         .MuiButton-label{
-            font-size: 12px;
-          }
+        .MuiButton-label {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -88,6 +88,22 @@
     }
   }
   .footer {
+    .MuiLink-root {
+      color: #fff;
+      font-size: @small-font-size;
+      cursor: pointer !important;
+    }
+    .MuiLink-root::nth-of-type(1) {
+      margin-left: 0 !important;
+    }
+    .link-list {
+      text-align: center;
+      .MuiTypography-root {
+        margin-left: 7px;
+        font-size: 12px;
+        color: #fff;
+      }
+    }
     background-color: @primary-color-200;
     margin-top: 25px;
     .content {
@@ -107,26 +123,25 @@
           color: @primary-color-800 !important;
         }
       }
-      .col1{
-        .language-selector{
-          .MuiButtonBase-root{
+      .col1 {
+        .language-selector {
+          .MuiButtonBase-root {
             background-color: #1111;
-             .MuiButton-label {
+            .MuiButton-label {
               color: @white;
             }
-            
           }
           div {
             z-index: 9998 !important;
             min-width: 15vw;
             .MuiList-padding {
-    padding-top: 0;
-    padding-bottom: 0;
-    .MuiButtonBase-root{
-      font-size: @small-font-size;
-      font-weight: @fontWeight;
-    }
-}
+              padding-top: 0;
+              padding-bottom: 0;
+              .MuiButtonBase-root {
+                font-size: @small-font-size;
+                font-weight: @fontWeight;
+              }
+            }
           }
         }
       }
@@ -169,18 +184,18 @@
 
 @media @phone-strict {
   .App {
-     .MuiAppBar-root{
-    .MuiToolbar-root{
-      flex-direction: column;
-     .makeStyles-menuButton-4{
-        padding: 1px;
-        margin-right: 0;
-      }
-      .makeStyles-title-5 {
-        font-size: 17px;
+    .MuiAppBar-root {
+      .MuiToolbar-root {
+        flex-direction: column;
+        .makeStyles-menuButton-4 {
+          padding: 1px;
+          margin-right: 0;
+        }
+        .makeStyles-title-5 {
+          font-size: 17px;
+        }
       }
     }
-  }
     .footer {
       .content {
         flex-direction: column;
@@ -191,21 +206,20 @@
       }
     }
   }
-.profile-card{
-  width: 100% !important;
-  margin-top: 10px;
-             .cover{
-               width: 100%;
-                .profile-image{
-                   top:-50px !important;
-                   border-width: 4px !important;
-                }
-            }
-            .paper-content{
-                  width: 100%;
-            }
-            
-        }
+  .profile-card {
+    width: 100% !important;
+    margin-top: 10px;
+    .cover {
+      width: 100%;
+      .profile-image {
+        top: -50px !important;
+        border-width: 4px !important;
+      }
+    }
+    .paper-content {
+      width: 100%;
+    }
+  }
 }
 
 .more-options {
@@ -223,55 +237,54 @@
   }
 }
 
-.profile-card{
-            overflow: hidden;
-            width: 20%;
-             .cover{
-                width: 100%;
-                height: 25%;
-                background-color: @secondary-color-100;
-                .Particles{
-                    width: inherit;
-                    position: relative;
-                    z-index: 1;
-                }
-                .profile-image{
-                    position: relative;
-                    width: 100px;
-                    height: 100px;
-                    border: 5px solid @primary-color-100;
-                    box-shadow: 1px 1px 5px #333;
-                    border-radius: 50%;
-                    top : -70%;
-                    z-index: 10;
-                    margin: auto;
-                    background-color: #333;
-                    left: 0;
-                    background-size: cover  !important;
-                }
-            }
-            .paper-content{
-                    height: 100%;
-                background-color: @primary-color-700 !important;
-                .content{
-                  position: relative;
-                  top: 20%;
-                  padding: 5px;
-                  .MuiTypography-h3{
-                    text-align: center;
-                    color: @primary-color-100;
-                    font-size: @title-font-size !important;
-                  }
-                  .MuiTypography-h4{
-                    text-align: center;
-                    color: @secondary-color-200;
-                    font-size: @small-font-size !important;
-                  }
-                  .MuiTypography-body2{
-                    color: @secondary-color-100 !important;
-                    padding: 20px;
-                  }
-                }
-            }
-            
-        }
+.profile-card {
+  overflow: hidden;
+  width: 20%;
+  .cover {
+    width: 100%;
+    height: 25%;
+    background-color: @secondary-color-100;
+    .Particles {
+      width: inherit;
+      position: relative;
+      z-index: 1;
+    }
+    .profile-image {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 5px solid @primary-color-100;
+      box-shadow: 1px 1px 5px #333;
+      border-radius: 50%;
+      top: -70%;
+      z-index: 10;
+      margin: auto;
+      background-color: #333;
+      left: 0;
+      background-size: cover !important;
+    }
+  }
+  .paper-content {
+    height: 100%;
+    background-color: @primary-color-700 !important;
+    .content {
+      position: relative;
+      top: 20%;
+      padding: 5px;
+      .MuiTypography-h3 {
+        text-align: center;
+        color: @primary-color-100;
+        font-size: @title-font-size !important;
+      }
+      .MuiTypography-h4 {
+        text-align: center;
+        color: @secondary-color-200;
+        font-size: @small-font-size !important;
+      }
+      .MuiTypography-body2 {
+        color: @secondary-color-100 !important;
+        padding: 20px;
+      }
+    }
+  }
+}

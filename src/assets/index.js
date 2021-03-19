@@ -5,9 +5,12 @@ module.exports = {
   carousel4: require("./images/cr4.png").default,
   carousel5: require("./images/cr5.png").default,
   loginPage: require("./images/login.jpg").default,
-  Logo: require("./images/favicon.svg").default,
+  Logo: require("./images/TechDEV.svg").default,
   apple: require("./images/apple.gif").default,
   android: require("./images/android.png").default,
   website: require("./images/website.jpg").default,
   mock: require("./mp4/mock.mp4").default,
+  favicon_small: require("./images/favicon-small.png").default,
+  favicon_large: require("./images/favicon-large.png").default,
+  Favicon: require("./images/favicon.svg").default,
 };

@@ -26,5 +26,9 @@
   "email": "Email",
   "phoneNo": "PhoneNo",
   "writeQuery": "Write down your query here!",
-  "sendMessage": "Send Message"
+  "sendMessage": "Send Message",
+  "hireDev": "Hire a developer!",
+  "hireDevText": "Hire our Best developers for your Job.",
+  "getService": "Get a Service!",
+  "getServiceText": "Need a Website or Mobile app to manage your business? \nDon't worry we are here for you."
 }

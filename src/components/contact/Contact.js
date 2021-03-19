@@ -3,14 +3,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Fade } from "react-reveal";
 import CustomCard from "../common/CustomCard";
-import GoogleMap from "../common/GoogleMap";
-import ProfileCard from "../common/ProfileCard";
-import ContactForm from "./ContactForm";
-import jsonData from "./card-data.json";
+import GoogleMap from "../common/GoogleMap"; /* 
+import ProfileCard from "../common/ProfileCard"; */
+import ContactForm from "./ContactForm"; /* 
+import jsonData from "./card-data.json"; */
 import "./index.less";
 const Contact = (props) => {
   const { t } = useTranslation();
-  const renderCardData = () => {
+  /*  const renderCardData = () => {
     return jsonData.map((profile, index) => (
       <ProfileCard
         key={index}
@@ -20,16 +20,16 @@ const Contact = (props) => {
         about={profile.about}
       />
     ));
-  };
+  }; */
   return (
     <div className="contact-card">
-      <Fade bottom>
+      {/* <Fade bottom>
         <CustomCard
           className="detail-card"
           header={null}
           cardContent={renderCardData()}
         />
-      </Fade>
+      </Fade> */}
       <Fade bottom>
         <Card className="typo-card">
           <CardContent>

@@ -15,9 +15,10 @@ import {
 } from "@material-ui/core";
 import { Fade, Flip } from "react-reveal";
 import CustomCarousel from "../common/CustomCarousel";
-import { FastForward } from "@material-ui/icons";
+import { FastForward, People, Settings } from "@material-ui/icons";
 import { apple, android, website, mock } from "../../assets";
 import VideoPlayer from "../common/VideoPlayer";
+import History from "../../@history";
 const Home = (props) => {
   const { t } = useTranslation();
   const [tab, setTab] = useState(1);
@@ -43,8 +44,9 @@ const Home = (props) => {
           <ImageTab
             key={1}
             image={website}
-            text="this is some text description for this and some of the
-                    carousel"
+            text={
+              "Boost your Business with in a smart way by getting a website and manage all your sale and employees in a smarter way.managing your business has never been so easy."
+            }
           />
         </Flip>
       )}
@@ -123,10 +125,34 @@ const Home = (props) => {
               <Card className="content-card-content">
                 <CardContent>
                   <Typography variant="h3">{t("ourProd")}</Typography>
-                  <Typography variant="body2">{t("ourProdDesc")}</Typography>
+                  <div className="service-content">
+                    <div>
+                      <Typography variant="h6">
+                        <People />
+                        {t("hireDev")}
+                      </Typography>
+                      <Typography variant="body2">
+                        {t("hireDevText")}
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h6">
+                        <Settings />
+                        {t("getService")}
+                      </Typography>
+                      <Typography variant="body2">
+                        {t("getServiceText")}
+                      </Typography>
+                    </div>
+                  </div>
                 </CardContent>
                 <CardActions>
-                  <Button endIcon={<FastForward />}>{t("more")}</Button>
+                  <Button
+                    onClick={() => History.push("/contacts")}
+                    endIcon={<FastForward />}
+                  >
+                    {t("more")}
+                  </Button>
                 </CardActions>
               </Card>
             </Paper>,

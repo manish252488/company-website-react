@@ -10,6 +10,7 @@ import {
 import React from "react";
 import "./index.less";
 import {
+  Link,
   List,
   ListItem,
   ListItemIcon,
@@ -29,7 +30,7 @@ const Footer = (props) => {
             {t("fText")}
           </Typography>
           <List>
-            <ListItem>
+            <ListItem key={1}>
               <ListItemText className="font-sm">{t("fText2")}</ListItemText>
             </ListItem>
           </List>
@@ -97,6 +98,13 @@ const Footer = (props) => {
             <Facebook />
           </CustomTooltip>
         </div>
+      </div>
+      <div class="link-list" key={2}>
+        <Link>terms & conditions</Link>
+        <Link>privacy policies</Link>
+        <Typography variant="subtitle2">
+          <sup>&copy;</sup>copyright
+        </Typography>
       </div>
     </div>
   );

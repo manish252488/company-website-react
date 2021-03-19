@@ -1,24 +1,24 @@
-@primary-color-100: #753a88;
-@primary-color-200: #834e94;
-@primary-color-300: #9161a0;
-@primary-color-400: #9e75ac;
-@primary-color-500: #ac89b8;
-@primary-color-600: #c8b0cf;
-@primary-color-700: #d6c4db;
-@primary-color-800: #e3d8e7;
-@primary-color-900: #e3d8e7;
-@secondary-color-100: #cc2b5e;
-@secondary-color-200: #d1406e;
-@secondary-color-300: #d6557e;
-@secondary-color-400: #db6b8e;
-@secondary-color-500: #e0809e;
-@secondary-color-600: #e695af;
-@secondary-color-700: #ebaabf;
-@secondary-color-800: #f0bfcf;
-@secondary-color-900: #f5d5df;
+@primary-color-100: #159957;
+@primary-color-200: #2ca368;
+@primary-color-300: #44ad79;
+@primary-color-400: #5bb889;
+@primary-color-500: #73c29a;
+@primary-color-600: #8accab;
+@primary-color-700: #a1d6bc;
+@primary-color-800: #b9e0cd;
+@primary-color-900: #d0ebdd;
+@secondary-color-100: #155799;
+@secondary-color-200: #2c68a3;
+@secondary-color-300: #4479ad;
+@secondary-color-400: #5b89b8;
+@secondary-color-500: #739ac2;
+@secondary-color-600: #8aabcc;
+@secondary-color-700: #a1bcd6;
+@secondary-color-800: #b9cde0;
+@secondary-color-900: #d0ddeb;
 
-@title: #753a88;
-@secondary-text: #c8b0cf;
+@title: #fff;
+@secondary-text: rgba(255, 247, 247, 0.795);
 @title-font-size: 20px;
 @body-font-size: 17px;
 @small-font-size: 14px;
@@ -58,7 +58,11 @@
 }
 
 .MuiAppBar-colorPrimary {
-  background: linear-gradient(@primary-color-100,@primary-color-300) !important;
+  background: linear-gradient(
+    to right,
+    @secondary-color-100,
+    @primary-color-300
+  ) !important;
 }
 .MuiCardHeader-title {
   font-size: @title-font-size !important;
@@ -104,19 +108,19 @@
   border-radius: 10px;
   background-color: @primary-color-500;
 }
-.web-view{
+.web-view {
   display: inherit;
 }
-.mobile-view{
+.mobile-view {
   display: none;
 }
-@media @phone-strict{
-  .web-view{
-  display: none;
-}
-.mobile-view{
-  display: inherit;
-}
+@media @phone-strict {
+  .web-view {
+    display: none;
+  }
+  .mobile-view {
+    display: inherit;
+  }
 }
 
 body {
@@ -128,7 +132,11 @@ body {
   height: 100%;
   position: relative;
   border-radius: 5px;
-  background-image: linear-gradient(to top, @primary-color-500 0%, @secondary-color-500 100%);
+  background-image: linear-gradient(
+    to top,
+    @primary-color-500 0%,
+    @secondary-color-500 100%
+  );
   overflow: hidden;
   background-color: inherit;
 }
@@ -142,15 +150,22 @@ body {
   margin-left: -500px;
   margin-top: -500px;
   border-radius: 35%;
-  background: rgba(255, 255, 255, .75);
+  background: rgba(255, 255, 255, 0.75);
   animation: wave 15s infinite linear;
 }
 
 @keyframes wave {
-  from { transform: rotate(0deg);}
-  from { transform: rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
 }
 
 .MuiFormHelperText-root {
   color: rgba(248, 79, 79, 0.911) !important;
+}
+.MuiTypography-body2 {
+  font-size: @body-font-size !important;
 }

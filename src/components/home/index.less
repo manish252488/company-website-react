@@ -23,14 +23,14 @@
     }
   }
 }
-.image-tab{
+.image-tab {
   width: 100%;
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: 28vw;
   border-radius: 5px;
-  div{
-    color:#fff;
+  div {
+    color: #fff;
     background-color: rgba(17, 17, 17, 0.616);
     padding: 5px;
     position: relative;
@@ -38,11 +38,11 @@
     font-size: @body-font-size;
   }
 }
-.left-grid{
-  .react-reveal{
-    .MuiPaper-root{
-      .MuiCardContent-root{
-        .MuiPaper-root{
+.left-grid {
+  .react-reveal {
+    .MuiPaper-root {
+      .MuiCardContent-root {
+        .MuiPaper-root {
           padding: 10px 40px;
           background-color: transparent;
           box-shadow: none;
@@ -53,22 +53,22 @@
     }
   }
 }
-.about-carousel{
-  .slider-frame{
+.about-carousel {
+  .slider-frame {
     height: auto;
-    .slider-list{
-      .slider-slide{
-        .custom-card{
+    .slider-list {
+      .slider-slide {
+        .custom-card {
           height: 100vh;
-          .MuiCardHeader-root{
+          .MuiCardHeader-root {
             max-width: 20vw;
             margin: unset;
             margin-left: 40px;
           }
-          .MuiCardContent-root{
+          .MuiCardContent-root {
             display: flex;
             height: 50%;
-            .MuiPaper-root{
+            .MuiPaper-root {
               background-color: @primary-color-700;
               overflow: hidden;
             }
@@ -78,12 +78,28 @@
     }
   }
 }
+.service-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  div {
+    width: 40%;
+    padding: 10px;
+  }
+  .MuiTypography-h6 {
+    color: @primary-color-100;
+    .MuiSvgIcon-root {
+      vertical-align: sub !important;
+      padding-right: 5px;
+    }
+  }
+}
 @media @phone-strict {
   .custom-grid {
     flex-direction: column;
-    .MuiGrid-root{
-      .react-reveal{
-        .MuiPaper-root{
+    .MuiGrid-root {
+      .react-reveal {
+        .MuiPaper-root {
           height: auto;
         }
       }
@@ -92,12 +108,20 @@
       flex-grow: unset !important;
     }
   }
-.image-tab{
-  min-height: 50vw;
-  div{
-    top: 30vw;
+  .service-content {
+    flex-direction: column;
+    div {
+      width: 100%;
+      padding: 10px;
+    }
   }
-}
+
+  .image-tab {
+    min-height: 50vw;
+    div {
+      top: 30vw;
+    }
+  }
   .content-card {
     .MuiPaper-root {
       flex-direction: column;
@@ -107,29 +131,29 @@
     }
   }
 
-  .about-carousel{
-  .slider-frame{
-    height: auto;
-    .slider-list{
-      .slider-slide{
-        .custom-card{
-          height: 100vh;
-          .MuiCardHeader-root{
-            max-width: 20vw;
-            margin: unset;
-            margin-left: 40px;
-          }
-          .MuiCardContent-root{
-            flex-direction: column;
-            .MuiPaper-root{
-              background-color: @primary-color-700;
-              width: 100%;
-              margin-top: 10px;
+  .about-carousel {
+    .slider-frame {
+      height: auto;
+      .slider-list {
+        .slider-slide {
+          .custom-card {
+            height: 100vh;
+            .MuiCardHeader-root {
+              max-width: 20vw;
+              margin: unset;
+              margin-left: 40px;
+            }
+            .MuiCardContent-root {
+              flex-direction: column;
+              .MuiPaper-root {
+                background-color: @primary-color-700;
+                width: 100%;
+                margin-top: 10px;
+              }
             }
           }
         }
       }
     }
   }
-}
 }

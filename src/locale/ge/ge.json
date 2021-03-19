@@ -26,5 +26,9 @@
   "email": "Email",
   "phoneNo": "Telefonnummer",
   "writeQuery": "Schreiben Sie hier Ihre Anfrage auf!",
-  "sendMessage": "Nachricht senden"
+  "sendMessage": "Nachricht senden",
+  "hireDev": "Stellen Sie einen Entwickler ein!",
+  "hireDevText": "Stellen Sie unsere besten Entwickler für Ihren Job ein.",
+  "getService": "Holen Sie sich einen Service!",
+  "getServiceText": "Benötigen Sie eine Website oder eine mobile App, um Ihr Unternehmen zu verwalten? \n Keine Sorge, wir sind für Sie da."
 }
