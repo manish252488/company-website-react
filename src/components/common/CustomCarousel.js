@@ -11,7 +11,7 @@ const CustomCarousel = (props) => {
       width={width}
       swiping={true}
       autoplay={autoPlay}
-      autoplayReverse={true}
+      wrapAround={true}
       enableKeyboardControls={true}
     >
       {props.components.length <= 0 &&

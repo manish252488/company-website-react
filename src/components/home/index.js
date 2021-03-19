@@ -74,7 +74,7 @@ const Home = (props) => {
   );
   return (
     <React.Fragment>
-      <CustomCarousel className="vid-cor" width="100%" />
+      <CustomCarousel className="vid-cor" width="100%" autoPlay={true} />
       <Grid className="custom-grid" container>
         <Grid item xs>
           <Fade bottom>
